@@ -14,6 +14,7 @@ $(document).ready(function() {
         //alert('The file "' + fileName +  '" has been selected.');
         $('#uploadedFile').html(fileName);
         $('#showFileName').removeClass('hide').addClass('show-name');
+        $('#fileUpload').addClass('hide');
     });
     $("#searchEmpty").click(function () {
 		event.preventDefault();

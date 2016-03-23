@@ -497,15 +497,16 @@ section.jdp-container {
     height: 32px;
     margin: 0; }
 
-.contract ul.inline-list {
+.contract ul {
   margin-top: 10px; }
-  .contract ul.inline-list li {
-    margin-left: 0;
-    margin-right: 1.375rem; }
-    .contract ul.inline-list li label {
+  .contract ul li {
+    /*margin-left: 0;*/
+    /*margin-right: 1.375rem;*/
+    padding-bottom: 0 !important; }
+    .contract ul li label {
       margin-bottom: 0;
       font-size: .85rem; }
-      .contract ul.inline-list li label input[type="file"], .contract ul.inline-list li label input[type="checkbox"], .contract ul.inline-list li label input[type="radio"], .contract ul.inline-list li label select {
+      .contract ul li label input[type="file"], .contract ul li label input[type="checkbox"], .contract ul li label input[type="radio"], .contract ul li label select {
         margin-bottom: 5px; }
 
 input[data-toggle] {
