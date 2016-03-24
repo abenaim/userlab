@@ -490,12 +490,23 @@ section.jdp-container {
   .quick-apply .switches label .switch.round {
     margin-bottom: 0; }
 
-.existing-resume .button-group li label {
-  padding: 5px 10px; }
-  .existing-resume .button-group li label img {
-    width: 32px;
-    height: 32px;
-    margin: 0; }
+.existing-resume .button-group {
+  margin-left: -5px;
+  margin-top: 10px; }
+  .existing-resume .button-group li label {
+    padding: 5px 10px; }
+    .existing-resume .button-group li label img {
+      width: 32px;
+      height: 32px;
+      margin: 0; }
+    .existing-resume .button-group li label .download-links {
+      border-left: 1px solid #CCC;
+      padding-left: 7px;
+      margin-left: 5px;
+      vertical-align: middle;
+      color: rgba(0, 0, 0, 0.21); }
+      .existing-resume .button-group li label .download-links:hover {
+        color: #39b3e1; }
 
 .contract ul {
   margin-top: 10px; }

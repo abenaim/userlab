@@ -15,13 +15,20 @@ $(document).ready(function() {
         $('#uploadedFile').html(fileName);
         $('#showFileName').removeClass('hide').addClass('show-name');
         $('#fileUpload').addClass('hide');
+        $('.existing-resume').addClass('hide');
+        //$('.upload-resume').addClass('hide');
+    });
+    $("#clearCV").click(function () {
+        event.preventDefault();
+        $('#fileUpload').removeClass('hide');
+        $('#showFileName').addClass('hide');
     });
     $("#searchEmpty").click(function () {
-		event.preventDefault();
-		$(".search-form").removeClass("hide");
-		//$(".search-empty").addClass("hide");
-	});
-	$("#backIcon").click(function () {
+        event.preventDefault();
+        $(".search-form").removeClass("hide");
+        //$(".search-empty").addClass("hide");
+    });
+    $("#backIcon").click(function () {
         event.preventDefault();
         $(".search-form").addClass("hide");
         //$(".backIcon").addClass("hide");

@@ -356,6 +356,8 @@ section.jdp-container {
 //Existing Resume
 .existing-resume {
 	.button-group {
+		margin-left: -5px;
+		margin-top: 10px;
 		li {
 			label {
 				padding: 5px 10px;
@@ -363,6 +365,16 @@ section.jdp-container {
 					width: 32px;
 					height: 32px;
 					margin: 0;
+				}
+				.download-links {
+					border-left: 1px solid #CCC;
+					padding-left: 7px;
+					margin-left: 5px;
+					vertical-align: middle;
+					color: rgba(0, 0, 0, 0.21);
+					&:hover {
+    					color: #39b3e1;
+    				}
 				}
 			}
 		}
@@ -385,6 +397,7 @@ section.jdp-container {
 		}
 	}
 }
+
 
 $primary-color: #008CBA;
 $secondary-color: #e7e7e7;
