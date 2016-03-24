@@ -161,19 +161,64 @@
                       <form>
                         <div class="row upload-resume">
                           <!-- <div class="small-12 medium-6 large-6 columns">
-                            <label for="jobTitle">Desire Job Title <small>required</small>
+                            <label for="jobTitle">Desire Job Title <small>requis</small>
                               <input type="text" id="jobTitle" placeholder="ex : Développeur web ou java" />
                             </label>
                           </div> -->
-                          <div class="columns">
-                            <label class="hide" id="showFileName">
-                              Ci-dessous le CV sélectionné
-                              <p class="disabled"><a href=""><i class="fa fa-trash-o"></i></a> <span id="uploadedFile"></span></p>
+                          <div class="columns existing-resume">
+                            <label for="eResume">
+                              Mon CV existant <small>requis</small>
+                              <ul class="button-group round toggle" data-toggle="buttons-radio">
+                                <li>
+                                  <input type="radio" id="r1" name="r-group" data-toggle="button" checked>
+                                  <label for="r1" class="text-center depth-first">
+                                    <img class="" src="http://static.ccm2.net/de.ccm.net/faq/images/o99XmSGvDg7GnHPTR6rcOqGa9Is7NVcWe6CStwTbn9vCoRSJsgSc5RtRvtsqisg6-word.png" width="32" height="32">
+                                    <span>Developpeur Java</span>
+                                    <a href="" class="download-links" data-tooltip aria-haspopup="true" class="has-tip" data-options="show_on:large" title="Download"><i class="fa fa-cloud-download fa-lg"></i></a> 
+                                  </label>
+                                </li>
+                                <li>
+                                  <input type="radio" id="r2" name="r-group" data-toggle="button">
+                                  <label for="r2" class="text-center depth-first">
+                                    <img class="" src="http://4bdesign.co.uk/wp-content/uploads/2015/11/logo-adobe-pdf.jpg" width="32" height="32">
+                                    <span>Senior Java Developer</span>
+                                    <a href="" class="download-links" data-tooltip aria-haspopup="true" class="has-tip" data-options="show_on:large" title="Download"><i class="fa fa-cloud-download fa-lg"></i></a>
+                                  </label>
+                                </li>
+                                <li>
+                                  <input type="radio" id="r3" name="r-group" data-toggle="button">
+                                  <label for="r3" class="text-center depth-first">
+                                    <img class="" src="http://static.ccm2.net/de.ccm.net/faq/images/o99XmSGvDg7GnHPTR6rcOqGa9Is7NVcWe6CStwTbn9vCoRSJsgSc5RtRvtsqisg6-word.png" width="32" height="32">
+                                    <span>Developpeur J2ee </span>
+                                    <a href="" class="download-links" data-tooltip aria-haspopup="true" class="has-tip" data-options="show_on:large" title="Download"><i class="fa fa-cloud-download fa-lg"></i></a>
+                                  </label>
+                                </li>
+                              </ul>
                             </label>
                           </div>
+                          <div class="columns hide" id="showFileName">
+                            <label class="">
+                              Ci-dessous le CV sélectionné
+                              <p class="disabled"><a href="" id="clearCV" data-tooltip aria-haspopup="true" class="has-tip tip-right" data-options="show_on:large" title="Remove and Upload new CV"><i class="fa fa-trash-o"></i></a> <span id="uploadedFile"></span></p>
+                            </label>
+                            <div data-alert class="alert-box info">Saving a CV will help you in receiving more recommended job offers <a href="#" class="close">&times;</a></div>
+                            <div class="privacy">
+                              <div class="switch round">
+                                <input id="switchName" type="checkbox" checked> 
+                                <label for="switchName">
+                                  <span class="switch-on">Yes</span>
+                                  <span class="switch-off">No</span>
+                                </label>
+                              </div>
+                              <label>
+                                Enregistrer ce CV
+                                <small class="show">Ces options pourront être changées ultérieurement. <a href="">(Afficher notre politique de confidentialité)</a></small>
+                              </label>
+                            </div>
+                          </div>
                           <div class="columns upload-resume">
-                            <label for="uploadcv">
-                              Joindre votre C.V <small>required</small>
+                            <label for="uploadcv" id="fileUpload">
+                              Joindre votre C.V <small>requis</small>
                               <p><small>Fichiers .DOC, .DOCX, .PDF, .RTF, .TXT, .ODT, .WPS d'une taille max de 1024 KB.</small></p>
                               <div class="row">
                                 <div class="small-12 medium-4 large-4 columns">
@@ -200,37 +245,11 @@
                               </div>
                             </label>
                           </div>
-                          <div class="columns existing-resume">
-                            <label for="eResume">
-                              Joindre votre C.V <small>required</small>
-                              <ul class="button-group round toggle" data-toggle="buttons-radio">
-                                <li>
-                                  <input type="radio" id="r1" name="r-group" data-toggle="button">
-                                  <label for="r1" class="text-center depth-first">
-                                    <img class="" src="http://static.ccm2.net/de.ccm.net/faq/images/o99XmSGvDg7GnHPTR6rcOqGa9Is7NVcWe6CStwTbn9vCoRSJsgSc5RtRvtsqisg6-word.png" width="32" height="32">
-                                    <span>Developpeur Java</span>
-                                  </label>
-                                </li>
-                                <li>
-                                  <input type="radio" id="r2" name="r-group" data-toggle="button">
-                                  <label for="r2" class="text-center depth-first">
-                                    <img class="" src="http://4bdesign.co.uk/wp-content/uploads/2015/11/logo-adobe-pdf.jpg" width="32" height="32">
-                                    <span>Senior Java Developer</span>
-                                  </label>
-                                </li>
-                                <li>
-                                  <input type="radio" id="r3" name="r-group" data-toggle="button">
-                                  <label for="r3" class="text-center depth-first">
-                                    <img class="" src="http://static.ccm2.net/de.ccm.net/faq/images/o99XmSGvDg7GnHPTR6rcOqGa9Is7NVcWe6CStwTbn9vCoRSJsgSc5RtRvtsqisg6-word.png" width="32" height="32">
-                                    <span>Developpeur J2ee </span>
-                                  </label>
-                                </li>
-                              </ul>
-                            </label>
-                          </div>
-                          <div class="columns contract">
+
+                          
+                          <!-- <div class="columns contract">
                           <label for="contract">
-                            Type de contrat <small>Required</small>
+                            Type de contrat <small>requis</small>
                             <ul class="inline-list" id="contract">
                               <li>
                                 <label for="checkbox1">
@@ -284,20 +303,8 @@
                               </li>
                             </ul>
                           </label>
-                        </div>
-                          <div class="columns privacy">
-                            <div class="switch round">
-                              <input id="switchName" type="checkbox" checked> 
-                              <label for="switchName">
-                                <span class="switch-on">Yes</span>
-                                <span class="switch-off">No</span>
-                              </label>
-                            </div>
-                            <label>
-                              Enregistrer ce CV
-                              <small class="show">Ces options pourront être changées ultérieurement. <a href="">(Afficher notre politique de confidentialité)</a></small>
-                            </label>
-                          </div>
+                        </div> -->
+                          
                           <div class="columns button-group">
                             <a href="unknown_finish.html" class="button">Postuler</a>
                             <a href="" id="link1" class="link">Annuler</a>
@@ -308,27 +315,27 @@
                     <div class="content" id="panel2">
                       <form class="row profile">
                         <div class="small-12 medium-6 large-6 columns">
-                          <label for="firstName">First Name <small>required</small>
+                          <label for="firstName">First Name <small>requis</small>
                             <input type="text" id="firstName" required>
                           </label>
                         </div>
                         <div class="small-12 medium-6 large-6 columns">
-                          <label for="lastName">Last Name <small>required</small>
+                          <label for="lastName">Last Name <small>requis</small>
                             <input type="text" id="lastName" required>
                           </label>
                         </div>
                         <div class="small-12 medium-6 large-6 columns">
-                          <label for="password">Password <small>required</small>
+                          <label for="password">Password <small>requis</small>
                             <input type="password" id="password" required>
                           </label>
                         </div>
                         <div class="small-12 medium-6 large-6 columns">
-                          <label for="passwordConfirm">Password Confirm <small>required</small>
+                          <label for="passwordConfirm">Password Confirm <small>requis</small>
                             <input type="password" id="passwordConfirm" required>
                           </label>
                         </div>
                         <div class="small-12 medium-6 large-6 columns">
-                          <label for="email">Email Address <small>required</small>
+                          <label for="email">Email Address <small>requis</small>
                             <input type="email" id="email" required>
                           </label>
                         </div>
@@ -338,7 +345,7 @@
                           </label>
                         </div>
                         <div class="small-12 medium-6 large-6 columns">
-                          <label for="email">Region of your job search <small>required</small>
+                          <label for="email">Region of your job search <small>requis</small>
                             <select>
                               <option>Sélectionnez une région</option>
                               <option>Alsace</option>
@@ -350,7 +357,7 @@
                           </label>
                         </div>
                         <div class="small-12 medium-6 large-6 columns">
-                          <label for="zip">Diploma <small>Required</small>
+                          <label for="zip">Diploma <small>requis</small>
                             <select>
                               <option>Sélectionnez un diplôme</option>
                               <option>Non précisé</option>
@@ -364,7 +371,7 @@
                         </div>
                         <div class="columns contract">
                           <label for="contract">
-                            Type de contrat <small>Required</small>
+                            Type de contrat <small>requis</small>
                             <ul class="inline-list" id="contract">
                               <li>
                                 <label for="checkbox1">
