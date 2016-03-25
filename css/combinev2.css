@@ -596,6 +596,11 @@ input[data-toggle]:checked + label:active {
     color: #FFFFFF; }
 .unknown .tabs-content a.button {
   padding: 8px 40px 11px !important; }
+.unknown .tabs-content .upload-resume .show-name p span {
+  margin-bottom: 0; }
+.unknown .tabs-content .preview-cv {
+  font-size: 14px;
+  font-weight: 400; }
 .unknown form.row.profile label {
   margin-bottom: 5px; }
 .unknown form.row.profile .button-group {

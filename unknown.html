@@ -161,8 +161,8 @@
                           <div class="columns hide" id="showFileName">
                             <label class="">
                               Ci-dessous le CV sélectionné
-                              <a href="#" data-reveal-id="previewCV" class="preview-cv right"><small>view a sample example</small></a>
                               <p class="disabled"><a href="" id="clearCV" data-tooltip aria-haspopup="true" class="has-tip tip-right" data-options="show_on:large" title="Remove and Upload new CV"><i class="fa fa-trash-o"></i></a> <span id="uploadedFile"></span></p>
+                              <a href="#" data-reveal-id="previewCV" class="preview-cv show"><i class="fa fa-eye"></i> view uploaded CV</a>
                             </label>
                             <div id="previewCV" class="reveal-modal medium" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
                               <h2 id="modalTitle">A sample preview for CV</h2>
@@ -256,17 +256,12 @@
                             Please verify below details before sending the application to recruiter
                           </div>
                         </div>
-                        <div class="small-12 medium-6 large-6 columns">
-                          <label for="firstName">First Name
-                            <input type="text" id="firstName" value="Bastien">
+                        <div class="columns">
+                          <label for="firstName">Name
+                            <input type="text" id="firstName" value="BastienBarbe">
                           </label>
                         </div>
-                        <div class="small-12 medium-6 large-6 columns">
-                          <label for="lastName">Last Name
-                            <input type="text" id="lastName" value="Barbe">
-                          </label>
-                        </div>
-                        <div class="small-12 medium-6 large-6 columns">
+                        <div class="columns">
                           <label for="email">Email Address <small>requis</small>
                             <input type="email" id="email" value="bastien.barbe@gmail.com" required>
                           </label>
@@ -281,35 +276,29 @@
                       <form class="row profile">
                         <div class="columns">
                           <div class="alert-box success">
-                          Your application has successfully sent to the recruiter. Confirmation mail has also been sent to you email bastein.barbe@gmail.com
+                          Your application has successfully sent to the recruiter. Confirmation mail has also been sent to you email <a href="mailto:bastein.barbe@gmail.com">bastein.barbe@gmail.com</a>
                           </div>
                         </div>
                         <div class="small-12 medium-6 large-6 columns">
-                          <label for="firstName">First Name <small>requis</small>
-                            <input type="text" id="firstName" value="Bastein">
+                          <label for="firstName">City 
+                            <input type="text" id="firstName" value="Paris">
                           </label>
                         </div>
                         <div class="small-12 medium-6 large-6 columns">
-                          <label for="lastName">Last Name <small>requis</small>
-                            <input type="text" id="lastName" value="Barbe">
+                          <label for="lastName">Zip
+                            <input type="text" id="lastName" value="75014">
                           </label>
                         </div>
-                        <div class="small-12 medium-6 large-6 columns">
-                          <label for="password">Password <small>requis</small>
-                            <input type="password" id="password">
-                          </label>
+                        <div class="columns">
+                          <div class="row">
+                            <div class="small-12 medium-6 large-6 columns">
+                              <label for="password">Create New Password
+                                <input type="password" id="password">
+                              </label>
+                            </div>
+                          </div>
                         </div>
                         
-                        <div class="small-12 medium-6 large-6 columns">
-                          <label for="email">Email Address <small>requis</small>
-                            <input type="email" id="email" value="bastien.barbe@gmail.com">
-                          </label>
-                        </div>
-                        <div class="small-12 medium-6 large-6 columns">
-                          <label for="zip">City <small>optional</small>
-                            <input type="text" id="zip" value="Paris" required>
-                          </label>
-                        </div>
                         <div class="columns button-group">
                           <!-- <a href="" id="link2" class="button border">Previous</a> -->
                           <a href="" id="" class="button">Save</a>

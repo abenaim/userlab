@@ -509,6 +509,13 @@ input[data-toggle]:checked + label:active {
 		a.button {
 			padding: 8px 40px 11px !important;
 		}
+		.upload-resume .show-name p span {
+			margin-bottom: 0;
+		}
+		.preview-cv {
+			font-size: 14px;
+			font-weight: 400;
+		}
 	}
 	form.row.profile {
 		label {
