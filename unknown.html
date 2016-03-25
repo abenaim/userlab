@@ -161,9 +161,14 @@
                           <div class="columns hide" id="showFileName">
                             <label class="">
                               Ci-dessous le CV sélectionné
+                              <a href="#" data-reveal-id="previewCV" class="preview-cv right"><small>view a sample example</small></a>
                               <p class="disabled"><a href="" id="clearCV" data-tooltip aria-haspopup="true" class="has-tip tip-right" data-options="show_on:large" title="Remove and Upload new CV"><i class="fa fa-trash-o"></i></a> <span id="uploadedFile"></span></p>
                             </label>
-                            
+                            <div id="previewCV" class="reveal-modal medium" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+                              <h2 id="modalTitle">A sample preview for CV</h2>
+                              <p class="lead"><img src="http://www.yourcvbuilder.com/Content/images/template1.jpg"></p>
+                              <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+                            </div>
                           </div>
                           <div class="columns upload-resume">
                             <label for="uploadcv" class="row" id="fileUpload">
@@ -221,7 +226,7 @@
                           <div class="columns switches account">
                             <label>
                               <div class="switch round">
-                                <input id="switch1" type="checkbox"> 
+                                <input id="switch1" type="checkbox" checked> 
                                 <label for="switch1">
                                   <span class="switch-on">Yes</span>
                                   <span class="switch-off">No</span>
@@ -237,7 +242,7 @@
                           
                           <div class="columns button-group">
                             <a href="unknown_finish.html" class="button" id="applyRegister">Continue</a>
-                            <a href="" id="link1" class="link">I will apply later</a>
+                            <a href="" id="link1" class="link">Cancel</a>
                           </div>
                         </div>
                       </form>
@@ -276,7 +281,7 @@
                       <form class="row profile">
                         <div class="columns">
                           <div class="alert-box success">
-                          Your application has successfully sent to the recruiter
+                          Your application has successfully sent to the recruiter. Confirmation mail has also been sent to you email bastein.barbe@gmail.com
                           </div>
                         </div>
                         <div class="small-12 medium-6 large-6 columns">
