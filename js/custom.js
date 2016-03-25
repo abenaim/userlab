@@ -18,6 +18,10 @@ $(document).ready(function() {
         $('.existing-resume').addClass('hide');
         //$('.upload-resume').addClass('hide');
     });
+    
+    $("#cLettercheckbox").click(function () {
+        $('#createCoverLetter').toggleClass('hide show');
+    });
     $("#clearCV").click(function () {
         event.preventDefault();
         $('#fileUpload').removeClass('hide');
@@ -35,10 +39,10 @@ $(document).ready(function() {
     });
 
 
-    $("#btnApply").click(function () {
+    $("#btnLoginApply").click(function () {
         event.preventDefault();
         $(".upload-form").removeClass("hide");
-        $(this).hide();
+        $('.action').hide();
     });
 
     $("#btnContinueProfile").click(function () {
@@ -50,12 +54,31 @@ $(document).ready(function() {
         //$(".backIcon").addClass("hide");
     });
     $("#btnContinueNewsletter").click(function () {
-		event.preventDefault();
+        event.preventDefault();
         $("li:nth-of-type(2n)").removeClass("active");
         $("li:nth-of-type(3n)").addClass("active");
         $("#panel2").removeClass("active");
-		$("#panel3").addClass("active");
-		//$(".backIcon").addClass("hide");
-	});
+        $("#panel3").addClass("active");
+        //$(".backIcon").addClass("hide");
+    });
 
+    $("#applyRegister").click(function () {
+        $("#panel2").removeClass('active').addClass("hide");
+        $('#panel3').removeClass('hide').addClass('active');
+        
+
+        //$('#tab1').removeClass('active');
+        $('#tab2').addClass('active');
+        event.preventDefault();
+    });
+    $("#btnSendApplication").click(function () {
+        $("#panel2").removeClass('active').addClass("hide");
+        $('#panel3').removeClass('active').addClass('hide');
+        $('#panel4').removeClass('hide').addClass('active');
+        
+
+        //$('#tab1').removeClass('active');
+        $('#tab3').addClass('active');
+        event.preventDefault();
+    });
 });

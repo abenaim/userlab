@@ -90,9 +90,34 @@
 		@include columns($global-zero);
 		@include facet-shadow($global-inset-shadow);
 	}
+	.existing-resume {
+		.button-group {
+			li {
+				label {
+				    margin: 0;
+				}
+			}
+		}
+	}
+	input[data-toggle]:checked + label:before,
+	input[data-toggle]:checked + label:active:before {
+		//display: block;
+	}
+	.full-width {
+	    max-width: 82.5rem;
+	    margin-left: auto;
+	    margin-right: auto;
+	}
+
 } /* min-width 1441px, xlarge screens */
 
-@media only screen and (min-width: 90.063em) and (max-width: 120em) { } /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+@media only screen and (min-width: 90.063em) and (max-width: 120em) {
+	.full-width {
+	    max-width: 82.5rem;
+	    margin-left: auto;
+	    margin-right: auto;
+	}
+} /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
 
 /*// XXLarge screens*/
 @media only screen and (min-width: 120.063em) { } /* min-width 1921px, xxlarge screens */

@@ -122,13 +122,8 @@
                 <div class="row">
                   
                   <div class="columns upload-resume">
-                    <script type="text/javascript" src="//api.filestackapi.com/filestack.js"></script>
-
-                    <input type="filepicker" data-fp-apikey="AaMspcCr1TzS23I8Iuxemz"
-                    onchange="alert(event.fpfile.url)">
-                  
                     <label id="fileUpload">
-                      Joindre votre C.V <small>required</small>
+                      Joindre votre C.V <small>requis</small>
                       <p><small>Fichiers .DOC, .DOCX, .PDF, .RTF, .TXT, .ODT, .WPS d'une taille max de 1024 KB.</small></p>
                       <div class="small-12 medium-4 large-4 columns">
                         <label for="browse-file" class="error text-center depth-first" role="alert">
@@ -156,11 +151,25 @@
                       </div>
                     </label>
                   </div>
-                  <div class="columns">
-                    <label class="hide" id="showFileName">
+                  <div class="columns hide" id="showFileName">
+                    <label class="">
                       Ci-dessous le CV sélectionné
-                      <p class="disabled"><a href=""><i class="fa fa-trash-o"></i></a> <span id="uploadedFile"></span></p>
+                      <p class="disabled"><a href="" id="clearCV" data-tooltip aria-haspopup="true" class="has-tip tip-right" data-options="show_on:large" title="Remove and Upload new CV"><i class="fa fa-trash-o"></i></a> <span id="uploadedFile"></span></p>
                     </label>
+                    <div data-alert class="alert-box info">Saving a CV will help you in receiving more recommended job offers <a href="#" class="close">&times;</a></div>
+                    <div class="privacy">
+                      <div class="switch round">
+                        <input id="switchName" type="checkbox" checked> 
+                        <label for="switchName">
+                          <span class="switch-on">Yes</span>
+                          <span class="switch-off">No</span>
+                        </label>
+                      </div>
+                      <label>
+                        Enregistrer ce CV
+                        <small class="show">Ces options pourront être changées ultérieurement. <a href="">(Afficher notre politique de confidentialité)</a></small>
+                      </label>
+                    </div>
                   </div>
                   <div class="columns privacy">
                     <div class="switch round">
@@ -177,7 +186,7 @@
                   </div>
                   <div class="columns contract">
                     <label for="contract">
-                      Type de contrat <small>Required</small>
+                      Type de contrat <small>requis</small>
                       <ul class="small-block-grid-2 medium-block-grid-2 large-block-grid-2" id="contract">
                         <li>
                           <label for="checkbox1">
@@ -241,37 +250,37 @@
                 </div>
                 <div class="list-content row">
                   <div class="large-6 columns">
-                    <label class="error">First Name <small>required</small>
+                    <label class="error">First Name <small>requis</small>
                       <input type="text" class="error" />
                     </label>
                     <small class="error">Invalid entry</small>
                   </div>
                   <div class="large-6 columns">
-                    <label class="error">Last Name <small>required</small>
+                    <label class="error">Last Name <small>requis</small>
                       <input type="text" class="error" />
                     </label>
                     <small class="error">Invalid entry</small>
                   </div>
                   <div class="large-6 columns">
-                    <label class="error">Email Address <small>required</small>
+                    <label class="error">Email Address <small>requis</small>
                       <input type="email" class="error" required>
                     </label>
                     <small class="error">Invalid entry</small>
                   </div>
                   <div class="large-6 columns">
-                    <label class="error">Confirm Email Address <small>required</small>
+                    <label class="error">Confirm Email Address <small>requis</small>
                       <input type="email" class="error" required>
                     </label>
                     <small class="error">Invalid entry</small>
                   </div>
                   <div class="large-6 columns">
-                    <label class="error">New Password <small>required</small>
+                    <label class="error">New Password <small>requis</small>
                       <input type="password" class="error" required>
                     </label>
                     <small class="error">Invalid entry</small>
                   </div>
                   <div class="large-6 columns">
-                    <label class="error">Confirm Password <small>required</small>
+                    <label class="error">Confirm Password <small>requis</small>
                       <input type="password" class="error" required>
                     </label>
                     <small class="error">Invalid entry</small>

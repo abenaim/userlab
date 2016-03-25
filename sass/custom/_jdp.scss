@@ -258,7 +258,7 @@ section.jdp-container {
 				}
 				.tab-title.active {
 					a {
-					    color: #ee6e73;
+					    color: #00bfa5;
 					    display: block;
 					    padding: 1rem;
 					    width: 100%;
@@ -266,7 +266,7 @@ section.jdp-container {
 					    text-overflow: ellipsis;
 					    overflow: hidden;
 					    transition: color .28s ease;
-					    box-shadow: inset 0px -3px 0px #f6b2b5;
+					    box-shadow: inset 0px -3px 0px #00bfa5;
 					    will-change: left, right;
 					    outline: none;
 					}
@@ -279,6 +279,12 @@ section.jdp-container {
 						color: $global-color;
 					    font-weight: normal;
 					    line-height: 1.5;
+					    padding: 5px 0;
+					}
+					label.depth-first {
+					    &:hover {
+					    	box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+					    }
 					}
 					.upload-resume {
 						label {
@@ -315,6 +321,12 @@ section.jdp-container {
 		padding-top: 0.9375rem !important;
 		padding-left: 0.9375rem !important;
 		padding-right: 0.9375rem !important;
+	}
+}
+.switches.account,
+.switches.cover-letter {
+	label {
+		display: inline-flex;
 	}
 }
 .privacy, .switches {
@@ -356,10 +368,14 @@ section.jdp-container {
 //Existing Resume
 .existing-resume {
 	.button-group {
-		margin-left: -5px;
+		//margin-left: -5px;
 		margin-top: 10px;
 		li {
+			&:first-child {
+				padding-left:0;
+			}
 			label {
+				margin: 0;
 				padding: 5px 10px;
 				img {
 					width: 32px;
@@ -411,19 +427,21 @@ $selected-color: salmon;
 input[data-toggle] {
   display: none;
 }
-
+input[data-toggle]:checked + label {
+	margin-right: 0;
+}
 input[data-toggle]:checked + label,
 input[data-toggle]:checked + label:active {
-  /*//background-color: $selected-color;*/
-  /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) inset, 
-              0 1px 2px rgba(0, 0, 0, 0.05);*/
 	position: relative;
 	&:before {
-	content: '\f05d';
-	font-family: FontAwesome;
-	color: #28B583;
-	font-size: 20px;
-	margin-right: 10px;
+		content: '\f046';
+		font-family: FontAwesome;
+		color: #28B583;
+		font-size: 25px;
+		position: absolute;
+		top: -17px;
+		font-weight: normal;
+		left: -12px;
 	}
 }
 
@@ -432,3 +450,72 @@ input[data-toggle]:checked + label:active {
     margin: 0 -0.9rem;
   }
 }*/
+
+.split.button.facebook {
+    background: #3b5998;
+    text-transform: uppercase;
+    font-size: .85rem;
+    padding: 15px !important;
+}
+.split.button.google {
+    background: #d50f25;
+    text-transform: uppercase;
+}
+.seperator {
+	margin: 0;
+    line-height: 105px;
+    vertical-align: middle;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.cover-letter {
+	textarea {
+		margin-top: 20px;
+	}
+}
+.cover-letter {
+	font-size: 0.8rem;
+}
+
+.tabs-content {
+	.upload-resume {
+		label {
+			margin: 0 0 10px;
+			img {
+				width: 46px;
+    			height: 38px;
+    			margin: 0;
+			}
+		}
+	}
+}
+.unknown {
+	.tabs {
+		margin-top: 15px;
+		background: #EFEFEF;
+		li {
+			color: rgba(34, 34, 34, 0.37);
+		    font-size: 0.88889rem;
+		    padding: 5px 30px;
+		}
+		li.tab-title.active {
+			background: #00bfa5;
+			color: #FFFFFF;
+			
+		}
+	}
+	.tabs-content {
+		a.button {
+			padding: 8px 40px 11px !important;
+		}
+	}
+	form.row.profile {
+		label {
+			margin-bottom: 5px;
+		}
+		.button-group {
+			margin-top: 10px;
+		}
+	}
+}

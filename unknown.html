@@ -112,20 +112,20 @@
     <a class="exit-off-canvas"></a> 
     
     <!-- Main Body Starts Here -->
-    <section class="main-section jdp-container">
+    <section class="main-section jdp-container unknown">
       <div class="row full-width">
         <div class="columns">
           <div class="row top-content">
             <div class="left-content small-12 medium-12 large-9 columns">
               <div class="media">
                 <div class="media-left show-for-large-up">
-                  <img src="http://emj.icbdr.com/MediaManagement/43/M7757663RXK6W0H7G43.gif" border="0" class="companyImage" width="135" height="60">
+                  <img src="http://img.icbdr.com/MediaManagement/3G/MVR2BH6FC244JM8C73G.gif" border="0" class="companyImage" width="135" height="60">
                 </div>
                 <div class="media-body">
                   <h1 class="media-heading">Lead Développeur Php/E-Commerce/Ez Publish</h1>
                   <p class="info">
-                    <a href=""><i class="fa fa-building-o"></i> Novius</a>
-                    <span><i class="fa fa-map-marker"></i> Villeurbanne, proche métro Charpennes</span>
+                    <a href=""><i class="fa fa-building-o"></i> Extia</a>
+                    <span><i class="fa fa-map-marker"></i> Lyon, Grenoble, Valence</span>
                     <span><i class="fa fa-clock-o"></i> 02 février 2016</span>
                   </p>
                   <p class="tags">
@@ -136,7 +136,7 @@
                     <a href="" class="label secondary round"><i class="fa fa-tags"></i> INTERNET</a>
                   </p>
                   <p class="action">
-                    <a class="button" href="" id="btnApply" title="Postulez maintenant en utilisant vos CV enregistrés sur votre compte, ou utilisez un nouveau CV pour cette offre.">Postuler maintenant !</a>
+                    <a class="button" href="" id="btnLoginApply" title="Postulez maintenant en utilisant vos CV enregistrés sur votre compte, ou utilisez un nouveau CV pour cette offre.">Postuler maintenant!</a>
                   </p>
                 </div>
               </div>
@@ -150,30 +150,25 @@
                 <!-- Upload new CV - forms started -->
                 <div class="upload-form hide">
                   <ul class="tabs" data-tab>
-                    <li class="tab-title active"><a href="#panel1">Vos coordonnées</a></li>
-                    <!-- <li class="tab-title"><a href="#panel2">Profile</a></li>
-                    <li class="tab-title"><a href="#panel3">Newsletter</a></li> -->
+                    <li class="tab-title active" id="tab1"><i class="fa fa-check-circle-o"></i> Apply</li>
+                    <li class="tab-title" id="tab2"><i class="fa fa-check-circle-o"></i> Confirmation</li>
+                    <li class="tab-title" id="tab3"><i class="fa fa-check-circle-o"></i> Save my profile</li>
                   </ul>
                   <div class="tabs-content">
-                    <div class="content active" id="panel1">
+                    <div class="content active" id="panel2">
                       <form>
                         <div class="row upload-resume">
-                          <!-- <div class="small-12 medium-6 large-6 columns">
-                            <label for="jobTitle">Desire Job Title <small>required</small>
-                              <input type="text" id="jobTitle" placeholder="ex : Développeur web ou java" />
-                            </label>
-                          </div> -->
-                          <div class="columns">
-                            <label class="hide" id="showFileName">
+                          <div class="columns hide" id="showFileName">
+                            <label class="">
                               Ci-dessous le CV sélectionné
-                              <p class="disabled"><a href=""><i class="fa fa-trash-o"></i></a> <span id="uploadedFile"></span></p>
+                              <p class="disabled"><a href="" id="clearCV" data-tooltip aria-haspopup="true" class="has-tip tip-right" data-options="show_on:large" title="Remove and Upload new CV"><i class="fa fa-trash-o"></i></a> <span id="uploadedFile"></span></p>
                             </label>
+                            
                           </div>
                           <div class="columns upload-resume">
-                            <label for="uploadcv">
+                            <label for="uploadcv" class="row" id="fileUpload">
                               Joindre votre C.V <small>required</small>
                               <p><small>Fichiers .DOC, .DOCX, .PDF, .RTF, .TXT, .ODT, .WPS d'une taille max de 1024 KB.</small></p>
-                              <div class="row">
                                 <div class="small-12 medium-4 large-4 columns">
                                   <label for="browse-file" class="text-center depth-first" role="alert">
                                     <input type="file" id="browse-file" required data-invalid aria-invalid="true">
@@ -195,281 +190,123 @@
                                     <span class="show"> via Google Drive</span>
                                   </label>
                                 </div>
+                              
+                            </label>
+                          </div>
+                          <div class="columns switches cover-letter">
+                            <label>
+                              <div class="switch round">
+                                <input id="cLettercheckbox" type="checkbox"> 
+                                <label for="cLettercheckbox">
+                                  <span class="switch-on">Yes</span>
+                                  <span class="switch-off">No</span>
+                                </label>
+                              </div>
+                              <div class="switch-text">
+                                Inclure une lettre de motivation <small>optional </small> 
+                                <small class="show">A cover letter is your brief introduction to a prospective recruiter. It helps you exhibit information beyond what your CV provides.</small>
+                                <a href="#" data-reveal-id="example" class="cover-letter">view a sample example</a>
+                                <div id="example" class="reveal-modal medium" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+                                  <h2 id="modalTitle">A sample cover letter</h2>
+                                  <p class="lead"><img src="http://image.slidesharecdn.com/samplecoverletter-1224577953849641-8/95/sample-cover-letters-1-728.jpg?cb=1246426098"></p>
+                                  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+                                </div>
+
+                                <p id="createCoverLetter" class="hide">
+                                  <textarea id="createCoverLetter" name="editor1"></textarea>
+                                </p>
                               </div>
                             </label>
                           </div>
-                          <!-- <div class="columns existing-resume">
-                            <label for="eResume">
-                              Joindre votre C.V <small>required</small>
-                              <ul class="button-group round toggle" data-toggle="buttons-radio">
-                                <li>
-                                  <input type="radio" id="r1" name="r-group" data-toggle="button">
-                                  <label for="r1" class="text-center depth-first">
-                                    <img class="" src="http://static.ccm2.net/de.ccm.net/faq/images/o99XmSGvDg7GnHPTR6rcOqGa9Is7NVcWe6CStwTbn9vCoRSJsgSc5RtRvtsqisg6-word.png" width="32" height="32">
-                                    <span>Developpeur Java</span>
-                                  </label>
-                                </li>
-                                <li>
-                                  <input type="radio" id="r2" name="r-group" data-toggle="button">
-                                  <label for="r2" class="text-center depth-first">
-                                    <img class="" src="http://4bdesign.co.uk/wp-content/uploads/2015/11/logo-adobe-pdf.jpg" width="32" height="32">
-                                    <span>Senior Java Developer</span>
-                                  </label>
-                                </li>
-                                <li>
-                                  <input type="radio" id="r2" name="r-group" data-toggle="button">
-                                  <label for="r2" class="text-center depth-first">
-                                    <img class="" src="http://static.ccm2.net/de.ccm.net/faq/images/o99XmSGvDg7GnHPTR6rcOqGa9Is7NVcWe6CStwTbn9vCoRSJsgSc5RtRvtsqisg6-word.png" width="32" height="32">
-                                    <span>Developpeur J2ee avec 3 années...</span>
-                                  </label>
-                                </li>
-                              </ul>
-                            </label>
-                          </div> -->
-                          <div class="columns contract">
-                          <label for="contract">
-                            Type de contrat <small>Required</small>
-                            <ul class="inline-list" id="contract">
-                              <li>
-                                <label for="checkbox1">
-                                  <input type="checkbox" id="checkbox1"> CDI
-                                </label>
-                              </li>
-                              <li>
-                                <label for="checkbox2">
-                                  <input type="checkbox" id="checkbox2"> CDD
-                                </label>
-                              </li>
-                              <li>
-                                <label for="checkbox3">
-                                  <input type="checkbox" id="checkbox3"> Contrat de professionalisation
-                                </label>
-                              </li>
-                              <li>
-                                <label for="checkbox4">
-                                  <input type="checkbox" id="checkbox4"> Contrat d'apprentissage
-                                </label>
-                              </li>
-                              <li>
-                                <label for="checkbox3">
-                                  <input type="checkbox" id="checkbox3"> CDD/Intérim - temps plein
-                                </label>
-                              </li>
-                              <li>
-                                <label for="checkbox4">
-                                  <input type="checkbox" id="checkbox4"> Stage
-                                </label>
-                              </li>
-                              <li>
-                                <label for="checkbox3">
-                                  <input type="checkbox" id="checkbox3"> Indépendant
-                                </label>
-                              </li>
-                              <li>
-                                <label for="checkbox4">
-                                  <input type="checkbox" id="checkbox4"> VIE
-                                </label>
-                              </li>
-                              <li>
-                                <label for="checkbox3">
-                                  <input type="checkbox" id="checkbox3"> Bénévolat
-                                </label>
-                              </li>
-                              <li>
-                                <label for="checkbox4">
-                                  <input type="checkbox" id="checkbox4"> Saisonnier
-                                </label>
-                              </li>
-                            </ul>
-                          </label>
-                        </div>
-                          <div class="columns privacy">
-                            <div class="switch round">
-                              <input id="switchName" type="checkbox" checked> 
-                              <label for="switchName">
-                                <span class="switch-on">Yes</span>
-                                <span class="switch-off">No</span>
-                              </label>
-                            </div>
+                          <div class="columns switches account">
                             <label>
-                              Enregistrer ce CV
-                              <small class="show">Ces options pourront être changées ultérieurement. <a href="">(Afficher notre politique de confidentialité)</a></small>
+                              <div class="switch round">
+                                <input id="switch1" type="checkbox"> 
+                                <label for="switch1">
+                                  <span class="switch-on">Yes</span>
+                                  <span class="switch-off">No</span>
+                                </label>
+                              </div>
+                              <div class="switch-text">
+                                I want to create my profile from CV <small>optional </small>
+                                <small class="show">Choose "Yes" to create your profile from your CV.</small>
+                              </div>
                             </label>
                           </div>
+                          
+                          
                           <div class="columns button-group">
-                            <a href="unknown_finish.html" class="button">Postuler</a>
-                            <a href="" id="link1" class="link">Annuler</a>
+                            <a href="unknown_finish.html" class="button" id="applyRegister">Continue</a>
+                            <a href="" id="link1" class="link">I will apply later</a>
                           </div>
                         </div>
                       </form>
                     </div>
-                    <div class="content" id="panel2">
+                    
+
+                    <div class="content hide" id="panel3">
+                      <form class="row profile">
+                        <div class="columns">
+                          <div class="alert-box info">
+                            Please verify below details before sending the application to recruiter
+                          </div>
+                        </div>
+                        <div class="small-12 medium-6 large-6 columns">
+                          <label for="firstName">First Name
+                            <input type="text" id="firstName" value="Bastien">
+                          </label>
+                        </div>
+                        <div class="small-12 medium-6 large-6 columns">
+                          <label for="lastName">Last Name
+                            <input type="text" id="lastName" value="Barbe">
+                          </label>
+                        </div>
+                        <div class="small-12 medium-6 large-6 columns">
+                          <label for="email">Email Address <small>requis</small>
+                            <input type="email" id="email" value="bastien.barbe@gmail.com" required>
+                          </label>
+                        </div>
+                        <div class="columns button-group">
+                          <a href="" id="btnSendApplication" class="button">Send My Application</a>
+                        </div>
+                      </form>
+                    </div>
+
+                    <div class="content" id="panel4">
                       <form class="row profile">
                         <div class="small-12 medium-6 large-6 columns">
-                          <label for="firstName">First Name <small>required</small>
+                          <label for="firstName">First Name <small>requis</small>
                             <input type="text" id="firstName" required>
                           </label>
                         </div>
                         <div class="small-12 medium-6 large-6 columns">
-                          <label for="lastName">Last Name <small>required</small>
+                          <label for="lastName">Last Name <small>requis</small>
                             <input type="text" id="lastName" required>
                           </label>
                         </div>
                         <div class="small-12 medium-6 large-6 columns">
-                          <label for="password">Password <small>required</small>
+                          <label for="password">Password <small>requis</small>
                             <input type="password" id="password" required>
                           </label>
                         </div>
+                        
                         <div class="small-12 medium-6 large-6 columns">
-                          <label for="passwordConfirm">Password Confirm <small>required</small>
-                            <input type="password" id="passwordConfirm" required>
-                          </label>
-                        </div>
-                        <div class="small-12 medium-6 large-6 columns">
-                          <label for="email">Email Address <small>required</small>
+                          <label for="email">Email Address <small>requis</small>
                             <input type="email" id="email" required>
                           </label>
                         </div>
                         <div class="small-12 medium-6 large-6 columns">
-                          <label for="zip">Zip/Postal Code <small>optional</small>
-                            <input type="text" id="zip" required>
-                          </label>
-                        </div>
-                        <div class="small-12 medium-6 large-6 columns">
-                          <label for="email">Region of your job search <small>required</small>
-                            <select>
-                              <option>Sélectionnez une région</option>
-                              <option>Alsace</option>
-                              <option>Aquitaine</option>
-                              <option>Auvergne</option>
-                              <option>Basse-Normandie</option>
-                              <option>Bourgogne</option>
-                            </select>
-                          </label>
-                        </div>
-                        <div class="small-12 medium-6 large-6 columns">
-                          <label for="zip">Diploma <small>Required</small>
-                            <select>
-                              <option>Sélectionnez un diplôme</option>
-                              <option>Non précisé</option>
-                              <option>Aucun(e)</option>
-                              <option>BEP, CAP</option>
-                              <option>Niveau Bac</option>
-                              <option>Bac Professionnel</option>
-                              <option>Bac général</option>
-                            </select>
-                          </label>
-                        </div>
-                        <div class="columns contract">
-                          <label for="contract">
-                            Type de contrat <small>Required</small>
-                            <ul class="inline-list" id="contract">
-                              <li>
-                                <label for="checkbox1">
-                                  <input type="checkbox" id="checkbox1"> CDI
-                                </label>
-                              </li>
-                              <li>
-                                <label for="checkbox2">
-                                  <input type="checkbox" id="checkbox2"> CDD
-                                </label>
-                              </li>
-                              <li>
-                                <label for="checkbox3">
-                                  <input type="checkbox" id="checkbox3"> Contrat de professionalisation
-                                </label>
-                              </li>
-                              <li>
-                                <label for="checkbox4">
-                                  <input type="checkbox" id="checkbox4"> Contrat d'apprentissage
-                                </label>
-                              </li>
-                              <li>
-                                <label for="checkbox3">
-                                  <input type="checkbox" id="checkbox3"> CDD/Intérim - temps plein
-                                </label>
-                              </li>
-                              <li>
-                                <label for="checkbox4">
-                                  <input type="checkbox" id="checkbox4"> Stage
-                                </label>
-                              </li>
-                              <li>
-                                <label for="checkbox3">
-                                  <input type="checkbox" id="checkbox3"> Indépendant
-                                </label>
-                              </li>
-                              <li>
-                                <label for="checkbox4">
-                                  <input type="checkbox" id="checkbox4"> VIE
-                                </label>
-                              </li>
-                              <li>
-                                <label for="checkbox3">
-                                  <input type="checkbox" id="checkbox3"> Bénévolat
-                                </label>
-                              </li>
-                              <li>
-                                <label for="checkbox4">
-                                  <input type="checkbox" id="checkbox4"> Saisonnier
-                                </label>
-                              </li>
-                            </ul>
+                          <label for="zip">City <small>optional</small>
+                            <input type="text" id="zip" value="Paris" required>
                           </label>
                         </div>
                         <div class="columns button-group">
                           <!-- <a href="" id="link2" class="button border">Previous</a> -->
-                          <a href="" id="btnContinueNewsletter" class="button">Continue</a>
+                          <a href="" id="" class="button">Save</a>
                         </div>
                       </form>
                     </div>
-                    <div class="content" id="panel3">
-                      <form class="row">
-                        <div class="columns switches">
-                          <div class="switch round">
-                            <input id="switch1" type="checkbox" checked> 
-                            <label for="switch1">
-                              <span class="switch-on">Yes</span>
-                              <span class="switch-off">No</span>
-                            </label>
-                          </div>
-                          <label>
-                            ABulletin d'information Lesjeudis.com
-                            <small class="show">Recevez notre bulletin hebdomadaire d'informations avec les conseils de recherche d'experts en recrutement et des informations sur l'emploi et les secteurs qui recrutent.</small>
-                          </label>
-                        </div>
-                        <div class="columns switches">
-                          <div class="switch round">
-                            <input id="switch2" type="checkbox" checked> 
-                            <label for="switch2">
-                              <span class="switch-on">Yes</span>
-                              <span class="switch-off">No</span>
-                            </label>
-                          </div>
-                          <label>
-                            Informations concernant les salons
-                            <small class="show">Informations sur les événements et les salons se déroulant dans votre région !</small>
-                          </label>
-                        </div>
-                        <div class="columns switches">
-                          <div class="switch round">
-                            <input id="switch3" type="checkbox" checked> 
-                            <label for="switch3">
-                              <span class="switch-on">Yes</span>
-                              <span class="switch-off">No</span>
-                            </label>
-                          </div>
-                          <label>
-                            Autres informations sur les produits et les partenaires
-                            <small class="show">Informations sur les outils de recherche d'emploi, remises produit, messages de sponsorisation occasionnelle, etc.</small>
-                          </label>
-                        </div>
-                        <div class="columns button-group">
-                          <!-- <a href="" id="link3" class="button border">Previous</a> -->
-                          <a href="authenticated.html" id="btnComplete" class="button">Complete</a>
-                        </div>
-                      </form>
-                    </div>
+
                   </div>
                 </div>
                 <!-- Upload new CV - forms ends -->
@@ -496,19 +333,9 @@
                       </dl>
                     </li>
                   </ul>
-                <!-- <h3>Description</h3>
-                <p>Novius est une agence web créative et souriante, d'environ 30 personnes ; nous composons des solutions interactives multi-écrans pour satisfaire nos clients et leurs utilisateurs. <br >
-                Notre team de développeurs propose un poste en CDI, au sein de l'agence web Novius, sur Lyon.</p>
-                <p>Notre future développeuse ou futur développeur :</p>
-                <ul>
-                  <li>maîtrisera PHP 5 (et bientôt PHP 7), la programmation orientée objet, un CMS, et un framework PHP MVC (comme Laravel ou autre) ;</li>
-                  <li>aura une expérience professionnelle en développement web ou des projets personnels à nous présenter ;</li>
-                  <li>sera force de proposition, aura soif d'innovation, et cherchera toujours à évoluer et faire évoluer ceux qui l'entourent ;</li>
-                  <li>sera organisé et rigoureux, pour travailler efficacement en mode multi-projets.</li>
-                </ul> -->
                 <h3>Description</h3>
-                <p>Novius est une agence web créative et souriante, d'environ 30 personnes ; nous composons des solutions interactives multi-écrans pour satisfaire nos clients et leurs utilisateurs. <br >
-                Notre team de développeurs propose un poste en CDI, au sein de l'agence web Novius, sur Lyon.</p>
+                <p>Extia est une agence web créative et souriante, d'environ 30 personnes ; nous composons des solutions interactives multi-écrans pour satisfaire nos clients et leurs utilisateurs. <br >
+                Notre team de développeurs propose un poste en CDI, au sein de l'agence web Extia, sur Lyon.</p>
                 <p>Notre future développeuse ou futur développeur :</p>
                 <ul>
                   <li>maîtrisera PHP 5 (et bientôt PHP 7), la programmation orientée objet, un CMS, et un framework PHP MVC (comme Laravel ou autre) ;</li>
@@ -516,7 +343,7 @@
                   <li>sera force de proposition, aura soif d'innovation, et cherchera toujours à évoluer et faire évoluer ceux qui l'entourent ;</li>
                   <li>sera organisé et rigoureux, pour travailler efficacement en mode multi-projets.</li>
                 </ul>
-                <p>Au quotidien chez Novius, elle ou il :</p>
+                <p>Au quotidien chez Extia, elle ou il :</p>
                 <ul>
                   <li>utilisera des technos modernes (Git, PHP 5.5 (MVC), MySQL 5.6, Frameworks JS, Compass, Grunt...), avecdifférents CMS, et avec des méthodes modernes (Agilité, DevOps) ;</li>
                   <li>sera épaulé par des développeurs professionnels (12 personnes dont certaines dans le web depuis 10 ans), en équipe avec nos chargés d'affaire lyonnais et parisiens ;</li>
@@ -526,7 +353,7 @@
                 </ul>
                 <p>Allez-y, <a href="">candidatez</a> ! Ou posez vos questions en nous contactant via notre site internet.</p>
                 <h3>Conditions requises</h3>
-                <p>Au quotidien chez Novius, elle ou il :</p>
+                <p>Au quotidien chez Extia, elle ou il :</p>
                 <ul>
                   <li>utilisera des technos modernes (Git, PHP 5.5 (MVC), MySQL 5.6, Frameworks JS, Compass, Grunt...), avecdifférents CMS, et avec des méthodes modernes (Agilité, DevOps) ;</li>
                   <li>sera épaulé par des développeurs professionnels (12 personnes dont certaines dans le web depuis 10 ans), en équipe avec nos chargés d'affaire lyonnais et parisiens ;</li>
@@ -541,7 +368,7 @@
             </div>
             <div class="right-content small-12 medium-12 large-3 columns">
               <div class="list">
-                <h4 class="title"><i class="fa fa-building-o fa-lg"></i> Autres offres de <a href=""><u>Novius</u></a></h4>
+                <h4 class="title"><i class="fa fa-building-o fa-lg"></i> Autres offres de <a href=""><u>Extia</u></a></h4>
                 <ul class="no-bullet" id="SimpleCompanyJobsList">
                   <li class="info">
                     <a href="" class="show">Chef De Projet Technique Webmethods</a>
@@ -704,7 +531,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation/foundation.accordion.js"></script> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation/foundation.tooltip.min.js"></script> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation/foundation.dropdown.js"></script> 
-
+<script src="https://cdn.ckeditor.com/4.5.7/standard/ckeditor.js"></script>
 <script>
       $(document).foundation({
         accordion: {
@@ -722,12 +549,21 @@
         $('.tab-bar .menu-icon span').removeClass('nav-back');
       });
 
+      
+
       $(document).ready(function () {
         $("#viewed_profile").click(function () {
             $("#viewed_profile_content").toggleClass("hide show");
         });
 
+        CKEDITOR.replace( 'editor1' );
       });
     </script>
 </body>
 </html>
+
+
+
+
+<!-- CK Editor  -->
+<!-- http://cdn.ckeditor.com/ -->
