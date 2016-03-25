@@ -256,15 +256,23 @@
                             Please verify below details before sending the application to recruiter
                           </div>
                         </div>
-                        <div class="columns">
+                        <div class="small-12 medium-6 large-6 columns">
                           <label for="firstName">Name
                             <input type="text" id="firstName" value="BastienBarbe">
                           </label>
                         </div>
-                        <div class="columns">
+                        <div class="small-12 medium-6 large-6 columns">
                           <label for="email">Email Address <small>requis</small>
                             <input type="email" id="email" value="bastien.barbe@gmail.com" required>
                           </label>
+                        </div>
+                        <div class="columns">
+                          <a href="#" data-reveal-id="previewCV" class="preview-cv show"><i class="fa fa-file-text-o"></i> view uploaded CV</a>
+                          <div id="previewCV" class="reveal-modal medium" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+                            <h2 id="modalTitle">A sample preview for CV</h2>
+                            <p class="lead"><img src="http://www.yourcvbuilder.com/Content/images/template1.jpg"></p>
+                            <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+                          </div>
                         </div>
                         <div class="columns button-group">
                           <a href="" id="btnSendApplication" class="button">Send My Application</a>
