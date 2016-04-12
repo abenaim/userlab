@@ -37,7 +37,7 @@ $(document).ready(function() {
     //Adding "step4" class
     $('#progress').addClass('step4');
     $('#confirmDetails').addClass('hide');
-    $('#uploadForm').addClass('hide');
+    $('#uploadForm').hide();
 
     
     //Click on Top Apply Button
@@ -99,7 +99,7 @@ $(document).ready(function() {
         $('#uploadForm').fadeOut(function(){
             $('#btnLoginApply').show();
             $('#bottombtnLoginApply').show();
-            
+
             location.reload();
 
             $('html, body').animate({
