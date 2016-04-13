@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
@@ -115,96 +116,72 @@
       <div class="row">
         <div class="small-12 medium-12 large-9 large-centered columns">
           <h1>Déposez votre CV informatique sur Lesjeudis</h1>
-          <form data-abide class=" full-white-bg depth-first">
+          <form data-abide>
             <div class="list-body upload-resume" id="UploadResume">
               <div class="list-content" id="upload">
-                <form data-abide>
-                  <div class="hide" id="showFileName">
-                    <label>
-                      Vous avez selectionnez le CV suivant
-                      <div class="disabled"><button type="button" id="clearCV" data-tooltip aria-haspopup="true" class="has-tip tip-right" data-options="show_on:large" title="Remove and Upload new CV"><i class="fa fa-trash-o"></i></button> <span id="uploadedFile"></span></div>
-                      <a href="#" data-reveal-id="previewCV" class="preview-cv"><i class="fa fa-file-text-o"></i> view uploaded CV</a>
-                    </label>
-                    <div id="previewCV" class="reveal-modal medium" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-                      <h2 id="modalTitle">A sample preview for CV</h2>
-                      <p class="lead"><img src="http://www.yourcvbuilder.com/Content/images/template1.jpg"></p>
-                      <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-                    </div>
-                  </div>
-                  <div class="file-upload show">
-                    <label for="uploadcv" id="fileUpload">
+                <div class="row">
+                  
+                  <div class="file-upload show columns" id="fileUpload">
+                    <label for="uploadcv">
                       Joindre votre C.V <small>required</small>
                       <p><small>Fichiers .DOC, .DOCX, .PDF, .RTF, .TXT, .ODT, .WPS d'une taille max de 1024 KB.</small></p>
                       <label for="browse-file" class="small-12 medium-4 large-4 columns depth-first" role="alert">
-                        <input type="file" id="browse-file" required data-invalid aria-invalid="true">
+                        <input type="file" id="browse-file" required="" data-invalid="" aria-invalid="true">
                         <span class="show"><i class="fa fa-folder-open-o fa-2x"></i></span>
                         <span class="show title">Browse from Computer</span>
                       </label>
                       <label for="browse-dropbox" class="small-12 medium-4 large-4 columns depth-first" role="alert">
-                        <input type="file" id="browse-dropbox" required data-invalid aria-invalid="true">
+                        <input type="file" id="browse-dropbox" required="" data-invalid="" aria-invalid="true">
                         <span class="show"><i class="fa fa-dropbox fa-2x"></i></span>
                         <span class="show title"> via Dropbox</span>
                       </label>
                       <label for="browse-gdrive" class="small-12 medium-4 large-4 columns depth-first" role="alert">
-                        <input type="file" id="browse-gdrive" required data-invalid aria-invalid="true">
+                        <input type="file" id="browse-gdrive" required="" data-invalid="" aria-invalid="true">
                         <span class="show"><i class="fa fa-google fa-2x"></i></span>
                         <span class="show title"> via Google Drive</span>
                       </label>
                       <small class="error">Please upload your CV.</small>
                     </label>
                   </div>
-                  <div class="switches cover-letter">
-                    <label>
+                  <div class="columns hide" id="showFileName">
+                    <label class="">
+                      Ci-dessous le CV sélectionné
+                      <p class="disabled"><a href="" id="clearCV" data-tooltip aria-haspopup="true" class="has-tip tip-right" data-options="show_on:large" title="Remove and Upload new CV"><i class="fa fa-trash-o"></i></a> <span id="uploadedFile"></span></p>
+                    </label>
+                    <div data-alert class="alert-box info">Saving a CV will help you in receiving more recommended job offers <a href="#" class="close">&times;</a></div>
+
+                    <div class="savecv">
                       <div class="switch round">
-                        <input id="cLettercheckbox" type="checkbox"> 
-                        <label for="cLettercheckbox">
-                          <span class="switch-on">Oui</span>
+                        <input id="switchSave" type="checkbox" checked=""> 
+                        <label for="switchSave">
+                          <span class="switch-on">Yes</span>
                           <span class="switch-off">No</span>
                         </label>
                       </div>
-                      <div class="switch-text">
-                        Inclure une lettre de motivation <small>optional </small> 
-                        <small class="show">Si vous le souhaitez, vous pouvez ajouter une lettre de motivation. Ajouter une lettre de motivation.</small>
-                        <a href="#" data-reveal-id="example" class="cover-letter"><i class="fa fa-file-text-o"></i> sample cover letter</a>
-                        <div id="example" class="reveal-modal medium" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-                          <h2 id="modalTitle">A sample cover letter</h2>
-                          <p class="lead"><img src="http://image.slidesharecdn.com/samplecoverletter-1224577953849641-8/95/sample-cover-letters-1-728.jpg?cb=1246426098"></p>
-                          <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-                        </div>
+                      <label>
+                        Enregistrer ce CV
+                          <small class="show">Ces options pourront être changées ultérieurement. <a href="">(Afficher notre politique de confidentialité)</a></small>
+                      </label>
+                    </div>
 
-                        <div class="row">
-                          <div class="small-12 medium-12 large-12 columns">
-                            <p id="createCoverLetter" class="type-cover-letter hide">
-                              <textarea id="createCoverLetter" cols="98"></textarea>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
+                  </div>
+                  <div class="columns privacy">
+                    <div class="switch round">
+                      <input id="switchName" type="checkbox" checked=""> 
+                      <label for="switchName">
+                        <span class="switch-on">Yes</span>
+                        <span class="switch-off">No</span>
+                      </label>
+                    </div>
+                    <label>
+                      Autoriser les recruteurs à voir mon CV
+                      <small class="show">Ces options pourront être changées ultérieurement. <a href="">(Afficher notre politique de confidentialité)</a></small>
                     </label>
                   </div>
-                  <div class="switches account">
-                    <label id="accountRegister">
-                      <div class="switch round">
-                        <input id="switch1" type="checkbox" checked>
-                        <span></span>
-                      </div>
-                      <div class="switch-text">
-                        Enregistrer et créer un compte à partir de ce CV <small>optional </small>
-                        <small class="show">Choose "Yes" to create your profile from your CV.</small>
-                      </div>
-                    </label>
-                  </div>
-                  <div class="button-group">
-                    <button type="button" class="button" id="applyRegister">Suivant</button>
-                    <button type="button" class="link" id="cancelApply">Annuler</button>
-                  </div>
-                </form>
-                <div class="row">
-                  
                   <div class="columns contract">
                     <label for="contract">
-                      Type de contrat <small>Required</small>
-                      <ul class="inline-list" id="contract">
+                      Type de contrat <small>requis</small>
+                      <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2" id="contract">
                         <li>
                           <label for="checkbox1">
                             <input type="checkbox" id="checkbox1"> CDI
@@ -226,51 +203,39 @@
                           </label>
                         </li>
                         <li>
-                          <label for="checkbox3">
-                            <input type="checkbox" id="checkbox3"> CDD/Intérim - temps plein
+                          <label for="checkbox5">
+                            <input type="checkbox" id="checkbox5"> CDD/Intérim - temps plein
                           </label>
                         </li>
                         <li>
-                          <label for="checkbox4">
-                            <input type="checkbox" id="checkbox4"> Stage
+                          <label for="checkbox6">
+                            <input type="checkbox" id="checkbox6"> Stage
                           </label>
                         </li>
                         <li>
-                          <label for="checkbox3">
-                            <input type="checkbox" id="checkbox3"> Indépendant
+                          <label for="checkbox7">
+                            <input type="checkbox" id="checkbox7"> Indépendant
                           </label>
                         </li>
                         <li>
-                          <label for="checkbox4">
-                            <input type="checkbox" id="checkbox4"> VIE
+                          <label for="checkbox8">
+                            <input type="checkbox" id="checkbox8"> VIE
                           </label>
                         </li>
                         <li>
-                          <label for="checkbox3">
-                            <input type="checkbox" id="checkbox3"> Bénévolat
+                          <label for="checkbox9">
+                            <input type="checkbox" id="checkbox9"> Bénévolat
                           </label>
                         </li>
                         <li>
-                          <label for="checkbox4">
-                            <input type="checkbox" id="checkbox4"> Saisonnier
+                          <label for="checkbox10">
+                            <input type="checkbox" id="checkbox10"> Saisonnier
                           </label>
                         </li>
                       </ul>
                     </label>
                   </div>
-                  <div class="columns privacy">
-                    <div class="switch round">
-                      <input id="switchName" type="checkbox" checked=""> 
-                      <label for="switchName">
-                        <span class="switch-on">Yes</span>
-                        <span class="switch-off">No</span>
-                      </label>
-                    </div>
-                    <label>
-                      Autoriser les recruteurs à voir mon CV
-                      <small class="show">Ces options pourront être changées ultérieurement. <a href="">(Afficher notre politique de confidentialité)</a></small>
-                    </label>
-                  </div>
+                  
                 </div>
               </div>
               <div class="hide" id="profile">
@@ -279,37 +244,37 @@
                 </div>
                 <div class="list-content row">
                   <div class="large-6 columns">
-                    <label class="error">First Name <small>required</small>
+                    <label class="error">First Name <small>requis</small>
                       <input type="text" class="error" />
                     </label>
                     <small class="error">Invalid entry</small>
                   </div>
                   <div class="large-6 columns">
-                    <label class="error">Last Name <small>required</small>
+                    <label class="error">Last Name <small>requis</small>
                       <input type="text" class="error" />
                     </label>
                     <small class="error">Invalid entry</small>
                   </div>
                   <div class="large-6 columns">
-                    <label class="error">Email Address <small>required</small>
+                    <label class="error">Email Address <small>requis</small>
                       <input type="email" class="error" required>
                     </label>
                     <small class="error">Invalid entry</small>
                   </div>
                   <div class="large-6 columns">
-                    <label class="error">Confirm Email Address <small>required</small>
+                    <label class="error">Confirm Email Address <small>requis</small>
                       <input type="email" class="error" required>
                     </label>
                     <small class="error">Invalid entry</small>
                   </div>
                   <div class="large-6 columns">
-                    <label class="error">New Password <small>required</small>
+                    <label class="error">New Password <small>requis</small>
                       <input type="password" class="error" required>
                     </label>
                     <small class="error">Invalid entry</small>
                   </div>
                   <div class="large-6 columns">
-                    <label class="error">Confirm Password <small>required</small>
+                    <label class="error">Confirm Password <small>requis</small>
                       <input type="password" class="error" required>
                     </label>
                     <small class="error">Invalid entry</small>
@@ -428,16 +393,16 @@
     </footer>
   </div>
 </div>
-<script src="js/jquery.min.js"></script> 
-<script src="js/modernizr.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script> 
+<script src="http://img.icbdr.com/common/js/Foundation/vendor/modernizr.js"></script>
 
 <script src="js/uresume.js"></script> 
-<script src="js/foundation.min.js"></script> 
-<script src="js/foundation.accordion.js"></script> 
-<script src="js/foundation.tooltip.min.js"></script> 
-<script src="js/foundation.dropdown.js"></script> 
-<script src="js/foundation.topbar.min.js"></script> 
-<script src="js/foundation.abide.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation/foundation.accordion.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation/foundation.tooltip.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation/foundation.dropdown.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation/foundation.topbar.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation/foundation.abide.min.js"></script> 
 
 <script>
       $(document).foundation();
