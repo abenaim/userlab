@@ -5,16 +5,23 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Lesjeudis</title>
 		<link rel="stylesheet" href="css/lesjeudis.css" />
+		<style>
+			.doc ul li {position: relative;}
+			.doc ul li .label-text {
+				position: absolute;top: 33%;left: 0;background: #E57373;padding: 6px 16px 8px;
+				box-shadow: 0 2px 2px rgba(0, 0, 0, 0.43);color: #FFF;
+			}
+		</style>
 	</head>
-	<body>
+	<body class="doc">
 		<div class="row">
 			<div class="columns">
 				<h1>Lesjeudis <small>&#40;Resume Upload &amp; Apply Process&#41;</small></h1>
 				<p>The prototypes are combined with NICO'<sup>s</sup> design <a href="https://github.com/CB-Shantikumar/userlab/releases/tag/v1.1" target="_blank"> Download from Github <i class="fa fa-download"></i></a></p>
 				<ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-3">
-				  <li class="text-center"><a href="uresume.html" target="_blank"> <img class="th" src="images/version1.png"> Resume Upload</a></li>
-				  <li class="text-center"><a href="unknown.html" target="_blank"> <img class="th" src="images/version2.png">Apply -  Unknown</a></li>
-				  <li class="text-center"><a href="javascript:void(0);"> <img class="th" src="images/version3.png">Apply - Known </a></li>
+				  <li class="text-center"><a href="uresume.html" target="_blank"> <img class="th" src="images/version1.png"> <span class="label-text">Resume Upload</span></a></li>
+				  <li class="text-center"><a href="unknown.html" target="_blank"> <img class="th" src="images/version2.png"><span class="label-text"> Unknown Apply</span></a></li>
+				  <li class="text-center"><a href="javascript:void(0);"> <img class="th" src="images/version3.png"><span class="label-text">Known Apply</span></a></li>
 				</ul>
 			</div>
 		</div>
