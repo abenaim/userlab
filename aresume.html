@@ -8,17 +8,18 @@
 <link rel="stylesheet" href="css/lesjeudis.css" />
 </head>
 <body>
-<nav class="top-bar show-for-large-up" data-topbar role="navigation">
+<nav class="top-bar show-for-large-up" data-topbar="" role="navigation">
   <ul class="title-area">
     <li class="name">
       <h1><a href="javascript:void(0);"><img src="images/lj-logo.svg" width="182" height="30"></a></h1>
     </li>
   </ul>
+  
   <section class="top-bar-section"> 
-    <!-- Left Nav Section -->
+      <!-- Left Nav Section -->
     <ul class="left">
-      <li class="has-dropdown"> <a href="#">Offres d'emploi</a>
-        <ul class="dropdown">
+      <li class="has-dropdown not-click"> <a href="javascript:void(0);">Offres d'emploi</a>
+        <ul class="dropdown"><li class="title back js-generated"><h5><a href="javascript:void(0);">Back</a></h5></li><li class="parent-link hide-for-medium-up"><a class="parent-link js-generated" href="#">Offres d'emploi</a></li>
           <li><a href="javascript:void(0);">Vos offres recommandées</a></li>
           <li><a href="javascript:void(0);">Toutes nos offres d'emploi</a></li>
           <li><a href="javascript:void(0);"> - Par region</a></li>
@@ -29,9 +30,18 @@
           <li><a href="javascript:void(0);"> - Fiches metiers</a></li>
         </ul>
       </li>
-      <li> <a href="#">Déposer un CV</a> </li>
-      <li class="has-dropdown"> <a href="#">News et Conseils</a>
-        <ul class="dropdown"><li class="title back js-generated"><h5><a href="javascript:void(0)">Back</a></h5></li>
+      <li id="_ctl7_liEspacePerso" class="has-dropdown not-click">
+          <a>Mon espace personnel</a>
+          <ul class="dropdown"><li class="title back js-generated"><h5><a href="javascript:void(0);">Back</a></h5></li>
+              <li><a id="_ctl7_cbhlResumeManager" title="Mes CVs" href="javascript:void(0);">Mes CVs</a></li>
+              <li><a id="_ctl7_cbhlManageLetter" title="Gérer mes lettres de motivations" href="javascript:void(0);">Mes lettres de motivations</a></li>
+              <li><a id="_ctl7_cbhlManageAlert" title="Gérer mes alertes emails" href="javascript:void(0);">Mes alertes</a></li>
+              <li><a id="_ctl7_cbhlManageApp" title="Gérer mes candidatures" href="javascript:void(0);">Mes candidatures</a></li>
+              <li><a id="_ctl7_cbhlManageUser" title="Gérer mes informations" href="javascript:void(0);">Mes informations</a></li>
+          </ul>
+      </li>
+      <li class="has-dropdown not-click"> <a href="javascript:void(0);">News et Conseils</a>
+        <ul class="dropdown"><li class="title back js-generated"><h5><a href="javascript:void(0);">Back</a></h5></li>
               <li><a id="_ctl0_cbhlNews" title="Actualités" href="javascript:void(0);">Actualités</a></li>
               <li><a id="_ctl0_cbhlConseils" title="Conseils" href="javascript:void(0);">Conseils</a></li>
               <li><a id="_ctl0_cbhlJbdlw" title="Je bosse dans le web" href="javascript:void(0);" target="_blank">Je Bosse Dans Le Web</a></li>
@@ -43,14 +53,7 @@
     
     <!-- Right Nav Section -->
     <ul class="right">
-      <li><a href="#">Se connecter / S'enregistrer</a></li>
-      <li class="has-dropdown"> <a href="#">Recruteurs</a>
-        <ul class="dropdown">
-          <li><a href="javascript:void(0);">Logiciel de recrutement</a></li>
-          <li><a href="javascript:void(0);">Cvthèques</a></li>
-          <li><a href="javascript:void(0);">Publication d'offres</a></li>
-        </ul>
-      </li>
+      <li><a title="se déconnecter" href="javascript:void(0);"><i class="fa fa-sign-out fa-lg"></i> se déconnecter</a></li>
     </ul>
   </section>
 </nav>
@@ -58,7 +61,7 @@
   <div class="inner-wrap">
     <nav class="tab-bar hide-for-large-up">
       <section class="left"> <a class="left-off-canvas-toggle menu-icon" href="javascript:void(0);"><span></span></a> </section>
-      <section class="middle tab-bar-section"> <a href="#"><img src="http://img.icbdr.com/images/UniversalHeaderFooter/cb-logo-lj-2.png"></a> </section>
+      <section class="middle tab-bar-section"> <a href="javascript:void(0);"><img src="http://img.icbdr.com/images/UniversalHeaderFooter/cb-logo-lj-2.png"></a> </section>
     </nav>
     <aside class="left-off-canvas-menu">
       <ul class="accordion off-canvas-list required" data-accordion role="tablist">
@@ -123,7 +126,7 @@
                   
                   <div class="file-upload show columns" id="fileUpload">
                     <label for="uploadcv">
-                      Joindre votre C.V <small>requis</small>
+                      Joindre votre C.V <small>required</small>
                       <p><small>Fichiers .DOC, .DOCX, .PDF, .RTF, .TXT, .ODT, .WPS d'une taille max de 1024 KB.</small></p>
                       <label for="browse-file" class="small-12 medium-4 large-4 columns depth-first" role="alert">
                         <input type="file" id="browse-file" required="" data-invalid="" aria-invalid="true">
@@ -148,7 +151,7 @@
                       Ci-dessous le CV sélectionné
                       <p class="disabled"><a href="" id="clearCV" data-tooltip aria-haspopup="true" class="has-tip tip-right" data-options="show_on:large" title="Remove and Upload new CV"><i class="fa fa-trash-o"></i></a> <span id="uploadedFile"></span></p>
                     </label>
-                    <div data-alert class="alert-box info">Saving a CV will help you in receiving more recommended job offers <a href="#" class="close">&times;</a></div>
+                    <div data-alert class="alert-box info">Saving a CV will help you in receiving 50% more chance to find a job in the next 3 weeks <a href="#" class="close">&times;</a></div>
 
                     <div class="savecv">
                       <div class="switch round">
@@ -174,7 +177,7 @@
                       </label>
                     </div>
                     <label>
-                      Autoriser les recruteurs à voir mon CV 
+                      Autoriser les recruteurs à voir mon CV
                       <small class="show">Ces options pourront être changées ultérieurement. <a href="">(Afficher notre politique de confidentialité)</a></small>
                     </label>
                   </div>
@@ -235,17 +238,7 @@
                       </ul>
                     </label>
                   </div>
-                  <div class="columns small-12 medium-6 large-6 left">
-                    <div class="row collapse">
-                      <label for="upassword">Password <small>requis</small></label>
-                      <div class="small-9 medium-9 large-9 columns">
-                        <input type="password" id="upassword">
-                      </div>
-                      <div class="small-3 medium-3 large-3 columns">
-                        <a href="" class="postfix">show</a>
-                      </div>
-                    </div>
-                  </div>
+                  
                 </div>
               </div>
               <div class="hide" id="profile">
