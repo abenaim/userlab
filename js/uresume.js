@@ -1,5 +1,9 @@
+$( window ).load(function() {
+  $('#phide').hide();
+});
+
 $(document).ready(function() {
-	$('input[type="file"]').change(function(e){
+    $('input[type="file"]').change(function(e){
         var fileName = e.target.files[0].name;
         $('#uploadedFile').html(fileName);
         $('#showFileName').removeClass('hide').addClass('show-name');
@@ -8,15 +12,16 @@ $(document).ready(function() {
     });
 
     
+    $('#pshow').click(function(){
+        $(this).hide();
+        $('#phide').show();
+        $('#upassword').attr('type', 'text'); 
+    });
 
-    $('.tgl input').change(function(){
-        if($(this).is(':checked')){
-            $('#progress1').addClass('step4');
-            $('#pb-4').show();
-        }else{
-            $('#progress1').removeClass('step4');
-            $('#pb-4').hide();
-        }
-    })
+    $('#phide').click(function(){
+        $(this).hide();
+        $('#pshow').show();
+        $('#upassword').attr('type', 'password'); 
+    });
 
 });
