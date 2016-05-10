@@ -1,0 +1,135 @@
+section.jdp-container {
+	form {
+		.upload-resume {
+			.row {
+				.row.collapse {
+					label, input {
+						margin: 0;
+					}
+					button {
+						background-color: #fff;
+					    //border-style: solid;
+					    //border-width: 1px 1px 1px 0;
+					    border-color: #ccc;
+					    //box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+					    color: rgba(0, 0, 0, 0.59);
+					    padding: 0;
+					    text-transform: uppercase;
+					    font-size: 0.75rem;
+					    &:active, &:hover, &focus, &:visited {
+				    	    background: #fafafa;
+						    border-color: #999;
+						    outline: none;
+					    }
+					}
+				}
+			}
+		}
+	}
+}
+.upload-resume {
+	
+	.columns.error {
+		label {
+			margin-bottom: 0;
+			input {
+				border: 1px solid #f04124;
+			}
+		}
+		small.error {
+			background: transparent;
+			color: #f04124;
+		}
+	}
+	.gen-profile {
+		padding-top: 10px;
+		label {
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+		.link {
+		    margin-left: 40px;
+		    color: rgba(0, 0, 0, 0.44);
+		    background: none;
+		    outline: none;
+		    padding: 0;
+		    &:hover {
+		    	color: #333;
+		    }
+		}
+	}
+	label {
+		font-weight: normal;
+		img {
+			width: 96px;
+			height: 73px;
+			display: inline-block;
+			margin: 20px auto 0 auto;
+		}
+		input[type='file'] {
+		    opacity: 0;
+		    overflow: hidden;
+		    position: absolute;
+		    z-index: -1;
+		    left: 0;
+		    top: 0;
+		}
+		.has-tip {
+			font-weight: normal;
+			cursor: initial;
+		}
+		small {
+			color: #999;
+		}
+		span {
+			font-size: 0.85rem;
+		}
+	}
+	.show-name {
+		p {
+			position: relative;
+			margin-top: 8px;
+			a {
+			    position: absolute;
+			    right: 14px;
+			    top: 7px;
+			}
+		}
+	}
+	.list-header {
+		padding: 10px 22px;
+		border-bottom: 1px solid rgba(160, 160, 160, 0.2);
+		margin-bottom: 10px;
+		h2 {
+
+		}
+	}
+	.list-footer {
+		.button {
+			margin-bottom: 0;
+		}
+	}
+
+}
+
+.switch-on {
+  position: absolute;
+  left: -55px;
+  top: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 9px !important;	
+}
+.switch-off {
+  position: absolute;
+  left: -25px;
+  top: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 9px !important;
+}
+.switch-label {
+	vertical-align: top;
+	line-height: 30px;
+	font-size: 0.80rem !important;
+}

@@ -1,0 +1,32 @@
+//Verion 0.1
+
+//Listed are the custom files
+
+
+@import 'custom/consumer';
+@import 'custom/jdp';
+@import 'custom/jrp';
+@import 'custom/tags';
+
+@import 'custom/custom';
+@import 'custom/ljglobaldp';
+@import 'custom/richtextcontent';
+
+
+@import 'custom/responsive';
+
+
+
+//Changes in OLD files
+//_tags.scss
+//_variables.scss
+//_responsive.scss
+
+
+//New file added
+//_jrp.scss
+
+
+//New File for Upload Resume
+@import 'custom/postResume';
+

@@ -1,0 +1,82 @@
+
+//Buttons
+$global-round: 1000px !important; //Round
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+
+//mixin for border none
+@mixin border($none) {
+	border: $none;
+}
+
+//mixin for facet link and active link
+@mixin facet-links($padding, $font-size, $background, $color) {
+	>a, .active>a {
+		padding: $padding;
+		font-size: $font-size;
+		background: $background;
+		color: $color;
+	}
+}
+
+//mixin for columns padding for large screen
+@mixin columns ($padding) {
+	.facets.columns {
+		padding-left: $padding;
+	}
+}
+
+
+//Facet shadow
+@mixin facet-shadow ($box-shadow) {
+	.facets {
+		box-shadow: $box-shadow;
+	}
+}
+
+@mixin facet-link-hover ($color) {
+	color: $color;
+}
+
+//Zero value
+$global-zero: 0 !important;
+
+//Borders
+$global-none: none !important; //None 
+
+//box-shadow
+$depth-first: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+
+@mixin depth-first ($box-shadow) {
+	box-shadow: $box-shadow;
+}
+
+
+//Color
+$global-color: #023558 !important;
+$global-white: #FFFFFF;
+$global-grey: #CCCCCC !important;
+$global-orange: #f36b21;
+
+//Font-Sizes
+$global-normal: 1rem;
+
+
+//Box-shadow Inset
+$global-inset-shadow: inset -4px 0px 6px rgba(0, 0, 0, 0.1);
+
+//Block
+$global-block: block;
+$global-inline-block: inline-block;
+
+//Aligns
+$global-right: right;
+$global-left: left;
+$global-center: center;
+$global-justify: justify;
