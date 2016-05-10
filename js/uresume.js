@@ -65,11 +65,6 @@ $(document).ready(function() {
                     scrollTop: $('#genProfileComplete').offset().top-60
                 }, 'slow');
             });
-            // $('#genProfile').show();
-            // $('#upostResumeComplete').show();
-            // $('#upostResume').hide();
-
-
         });
     });
 
