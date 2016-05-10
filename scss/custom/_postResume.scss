@@ -28,6 +28,7 @@ section.jdp-container {
 	}
 }
 .upload-resume {
+	
 	.columns.error {
 		label {
 			margin-bottom: 0;
@@ -40,7 +41,23 @@ section.jdp-container {
 			color: #f04124;
 		}
 	}
-
+	.gen-profile {
+		padding-top: 10px;
+		label {
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+		.link {
+		    margin-left: 40px;
+		    color: rgba(0, 0, 0, 0.44);
+		    background: none;
+		    outline: none;
+		    padding: 0;
+		    &:hover {
+		    	color: #333;
+		    }
+		}
+	}
 	label {
 		font-weight: normal;
 		img {
@@ -56,16 +73,6 @@ section.jdp-container {
 		    z-index: -1;
 		    left: 0;
 		    top: 0;
-		}
-		input[type='text'],
-		input[type='email'],
-		input[type='password'] {
-			border-width: 0 0 1px;
-		}
-		input[type='text'] {
-		    min-height: 45px;
-		    font-size: 1rem;
-		    padding: 10px 20px;
 		}
 		.has-tip {
 			font-weight: normal;
@@ -92,6 +99,7 @@ section.jdp-container {
 	.list-header {
 		padding: 10px 22px;
 		border-bottom: 1px solid rgba(160, 160, 160, 0.2);
+		margin-bottom: 10px;
 		h2 {
 
 		}

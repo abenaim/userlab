@@ -1,5 +1,8 @@
 $( window ).load(function() {
   $('#phide').hide();
+  $('#upostResumeComplete').hide();
+  $('#preloader').hide();
+
 });
 
 $(document).ready(function() {
@@ -11,17 +14,64 @@ $(document).ready(function() {
         $('.existing-resume').addClass('hide');
     });
 
-    
+    //Password SHOW
     $('#pshow').click(function(){
         $(this).hide();
         $('#phide').show();
         $('#upassword').attr('type', 'text'); 
     });
 
+    //Passwor HIDE
     $('#phide').click(function(){
         $(this).hide();
         $('#pshow').show();
         $('#upassword').attr('type', 'password'); 
     });
+
+
+    //Click on Post My Resume Button
+    $('#upostResume button').click(function(){
+        $('#uResumeUpload').fadeOut(function(){
+            $('#genProfile').fadeIn(function(){
+                $('html, body').animate({
+                    scrollTop: $('#genProfile').offset().top-60
+                }, 'slow');
+            });
+            $('#genProfile').show();
+            $('#upostResumeComplete').show();
+            $('#upostResume').hide();
+
+
+        });
+    });
+
+    //Retour
+    $('#uResumeBack').click(function(){
+        $('#genProfile').fadeOut(function(){
+            $('#uResumeUpload').fadeIn(function(){
+                $('#upostResume').show();
+                $('html, body').animate({
+                    scrollTop: $('#uResumeUpload').offset().top-60
+                }, 'slow');
+            });
+        });
+    });
+
+    //Click on Post My Resume Button
+    $('#btnCompleteUpload').click(function(){
+        $('#genProfile').fadeOut(function(){
+            $('#genProfileComplete').fadeIn(function(){
+                $('html, body').animate({
+                    scrollTop: $('#genProfileComplete').offset().top-60
+                }, 'slow');
+            });
+            // $('#genProfile').show();
+            // $('#upostResumeComplete').show();
+            // $('#upostResume').hide();
+
+
+        });
+    });
+
 
 });
