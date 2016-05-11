@@ -120,16 +120,16 @@
 @media only screen and (min-width: 64.063em) { } /* min-width 1025px, large screens */
 
 @media only screen and (min-width: 64.063em) and (max-width: 90em) {
+	section {
+		> .row:first-child {
+			padding-top: 15px !important;
+			padding-bottom: 15px !important;
+		}
+	}
 	.flex-block {
 		@include flex-display($inline-flex);
 	}
 	section.jdp-container {
-		> .row {
-			&:first-child {
-				padding-top: 15px;
-				padding-bottom: 15px;
-			}
-		}
 		.media {
 			.media-body {
 				.media-heading {
@@ -175,13 +175,16 @@
 
 /*// XLarge screens*/
 @media only screen and (min-width: 90.063em) {
+	section {
+		> .row:first-child {
+			padding-top: 15px !important;
+			padding-bottom: 15px !important;
+		}
+	}
 	.flex-block {
 		@include flex-display($inline-flex);
 	}
 	section.jdp-container {
-		.row:first-child {
-			padding-top: 15px;
-		}
 		.media {
 			.media-body {
 				.media-heading {
