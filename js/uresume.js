@@ -57,16 +57,5 @@ $(document).ready(function() {
         });
     });
 
-    //Click on Post My Resume Button
-    $('#btnCompleteUpload').click(function(){
-        $('#genProfile').fadeOut(function(){
-            $('#genProfileComplete').fadeIn(function(){
-                $('html, body').animate({
-                    scrollTop: $('#genProfileComplete').offset().top-60
-                }, 'slow');
-            });
-        });
-    });
-
 
 });
