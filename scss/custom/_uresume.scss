@@ -75,7 +75,7 @@
 		}
 	}
 	.profile-middle {
-		margin-top: 15px;
+		margin-top: 5px;
 		h4 {
 			font-weight: normal;
 			//border-bottom: 1px solid rgba(204, 204, 204, 0.41);
@@ -86,12 +86,37 @@
 			border-color: rgba(216, 216, 216, 0.13);
 			position: relative;
 			margin-bottom: 0;
+			&:hover {
+				box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1),0 0px 7px 0 rgba(0,0,0,0.1);
+			}
 			.list-actions {
 			    position: absolute;
 			    right: 10px;
+			    a {
+			    	color: rgba(111, 111, 111, 0.68);
+			    	border: none;
+			    	cursor: pointer;
+			    	&:hover {
+			    		color: #09a0db;
+			    	}
+			    }
 			    i {
 			    	margin-right: 10px;
 			    }
+			}
+			.subheader {
+				margin: 0;
+			}
+		}
+		.bottom-actions {
+			font-size: 0.9rem;
+			margin-top: 8px;
+			a {
+			    background-color: #f04124;
+				border-color: #cf2a0e;
+			    color: #FFFFFF;
+			    padding: 10px 20px 12px;
+			    border-radius: 4px;
 			}
 		}
 	}
