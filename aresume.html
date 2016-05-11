@@ -121,7 +121,7 @@
           <h1>Déposez votre CV informatique sur Lesjeudis</h1>
           <form data-abide>
             <div class="list-body upload-resume" id="UploadResume">
-              <div class="list-content" id="upload">
+              <div class="list-content" id="uResumeUpload">
                 <div class="row">
                   
                   <div class="file-upload show columns" id="fileUpload">
@@ -230,9 +230,36 @@
                   </div>
                 </div>
               </div>
-
-              <div class="list-footer">
-                  <a href="lesjeudis.com" class="button">D&eacute;poser mon CV</a>
+              <div class="list-footer" id="upostResume">
+                  <button type="button" class="button">D&eacute;poser mon CV</button>
+              </div>
+              <div class="hide gen-profile" id="genProfile">
+                <div class="list-content row">
+                  <div class="columns">
+                    <div class="alert-box warning">
+                      Remplissez ces champs pour finaliser votre enregistrement.
+                    </div>
+                  </div>
+                  <div class="small-12 medium-6 large-6 columns">
+                    <label>Prénom <small>requis</small>
+                      <input type="text" required>
+                    </label>
+                  </div>
+                  <div class="small-12 medium-6 large-6 columns">
+                    <label>Nom <small>requis</small>
+                      <input type="text" required>
+                    </label>
+                  </div>
+                  <div class="small-12 medium-6 large-6 columns left">
+                    <label>Ville / Code postal <small>optionel</small>
+                      <input type="text" required>
+                    </label>
+                  </div>
+                </div>
+                <div class="list-footer" id="upostResumeComplete">
+                  <a href="profile.html" name="btnContinue" class="button" id="btnCompleteUpload">Compléter mon profil</a>
+                  <button type="button" class="link" id="uResumeBack">Retour</button>
+                </div>
               </div>
 
             </div>
