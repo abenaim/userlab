@@ -22,14 +22,16 @@ $(document).ready(function() {
             $('#progress').addClass('step4').removeClass('step3');
             $('#tab1').css('left','0%');
             $('#tab2').css('left','28%');
-            $('#tab3').css('left','65%');
-            $('#tab4').css('left','95%').show();
+            $('#tab3').css('left','65%').fadeIn().show();
+            $('#tab4').css('left','95%').fadeIn().show();
+            $('#tab4 .small-circle').text('4');
         }else{
             $('#progress').removeClass('step4').addClass('step3');
             $('#tab1').css('left','0%');
-            $('#tab2').css('left','45%');
-            $('#tab3').css('left','96%');
-            $('#tab4').hide();
+            $('#tab2').css('left','43%');
+            $('#tab3').fadeOut().hide();
+            $('#tab4').css('left','inherit');
+            $('#tab4 .small-circle').text('3');
         }
     });
     
@@ -44,7 +46,7 @@ $(document).ready(function() {
     $('#btnLoginApply').click(function(){
         $('#uploadForm').fadeIn();
         $('html, body').animate({
-            scrollTop: $('#uploadForm').offset().top-98
+            scrollTop: $('#uploadForm').offset().top-25
         }, 'slow');
         $(this).hide();
         $('#bottombtnLoginApply').hide();
@@ -54,7 +56,7 @@ $(document).ready(function() {
     $('#bottombtnLoginApply').click(function(){
         $('#uploadForm').fadeIn();
         $('html, body').animate({
-            scrollTop: $('#uploadForm').offset().top-98
+            scrollTop: $('#uploadForm').offset().top-25
         }, 'slow');
         $(this).hide();
         $('#btnLoginApply').hide();
@@ -64,14 +66,15 @@ $(document).ready(function() {
     $('#applyRegister').click(function(){
         $('#panel1').fadeOut(function(){
             $('#panel2').fadeIn();
+            $('#tab2').addClass('active');
             $('#tab2').fadeIn().find('.small-circle').addClass('success');
         });
         if ($('#accountRegister span').css('background') == "rgb(51, 122, 183) none repeat scroll 0% 0% / auto padding-box border-box"){
             $('#progress').addClass('step4');
-            $('.meter').css('width', '36%');
+            $('.meter').css('width', '34%');
             //alert('step4 meter');
         }else{
-            $('.meter').css('width', '54%');
+            $('.meter').css('width', '52%');
             //alert('step3 meter');
         }
 
@@ -112,13 +115,16 @@ $(document).ready(function() {
     $('#btnSendApplication').click(function(){
         $('#panel2').fadeOut(function(){
             $('#panel3').fadeIn();
+            $('#tab3').addClass('active');
             $('#tab3 .small-circle').addClass('success');
         });
         if ($('#accountRegister span').css('background') == "rgb(51, 122, 183) none repeat scroll 0% 0% / auto padding-box border-box"){
-            $('.meter').css('width', '68%');
+            $('.meter').css('width', '65%');
         }else{
             $('#panel3 form').hide();
             $('#confirmDetails').show();
+            $('#tab4').addClass('active');
+            $('#tab4 .small-circle').addClass('success');
             $('#panel4').hide();
             $('.meter').css('width', '100%');
         }
@@ -133,6 +139,7 @@ $(document).ready(function() {
     $('#btnRetour').click(function(){
         $('#panel2').fadeOut(function(){
             $('#panel1').fadeIn();
+            $('#tab2').removeClass('active');
             $('#tab2 .small-circle').removeClass('success');
             $('.meter').css('width', '0%');
         });
@@ -149,6 +156,7 @@ $(document).ready(function() {
    $('#register').click(function(){
         $('#panel3').fadeOut(function(){
             $('#panel4').fadeIn();
+            $('#tab4').addClass('active');
             $('#tab4 .small-circle').addClass('success');
             $('.meter').css('width', '100%');
         });

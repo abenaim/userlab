@@ -90,10 +90,11 @@ section.jdp-container {
 			position: relative;
 			margin-top: 8px;
 			a {
-			    position: absolute;
-			    right: 14px;
-			    top: 7px;
+				&:hover {
+					color: #023558;
+				}
 			}
+			
 		}
 	}
 	.list-header {
@@ -111,7 +112,14 @@ section.jdp-container {
 	}
 
 }
-
+.preview-cv {
+	border: none;
+    position: absolute;
+    top: 12px;
+    right: 50px;
+    line-height: initial;
+    color: #999;
+}
 .switch-on {
   position: absolute;
   left: -55px;

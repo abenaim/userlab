@@ -144,24 +144,14 @@
                   </div>
                   <div class="columns hide" id="showFileName">
                     <label class="">
-                      Ci-dessous le CV sélectionné
-                      <p class="disabled"><a href="" id="clearCV" data-tooltip aria-haspopup="true" class="has-tip tip-right" data-options="show_on:large" title="Remove and Upload new CV"><i class="fa fa-trash-o"></i></a> <span id="uploadedFile"></span></p>
+                      Ci-dessous le CV sélectionné <small class="show">Saving a CV will help you in receiving more recommended job offers</small>
+                      <p class="disabled">
+                        <a href="#" data-reveal-id="previewCV" data-tooltip aria-haspopup="true" class="preview-cv has-tip tip-bottom" data-options="show_on:large" title="View Uploaded CV"><i class="fa fa-eye"></i></a>
+                        <a href="" id="clearCV" data-tooltip aria-haspopup="true" class="has-tip tip-bottom" data-options="show_on:large" title="Remove and Upload new CV"><i class="fa fa-trash-o"></i></a> <span id="uploadedFile"></span>
+                      </p>
                     </label>
-                    <div data-alert class="alert-box info">Saving a CV will help you in receiving more recommended job offers <a href="#" class="close">&times;</a></div>
 
-                    <div class="savecv">
-                      <div class="switch round">
-                        <input id="switchSave" type="checkbox" checked=""> 
-                        <label for="switchSave">
-                          <span class="switch-on">Oui</span>
-                          <span class="switch-off">Non</span>
-                        </label>
-                      </div>
-                      <label>
-                        Enregistrer ce CV
-                          <small class="show">Ces options pourront être changées ultérieurement. <a href="javascript:void(0);">(Afficher notre politique de confidentialité)</a></small>
-                      </label>
-                    </div>
+                    
 
                   </div>
                   <div class="columns privacy">
@@ -225,7 +215,13 @@
                       </ul>
                     </label>
                   </div>
-                  <div class="columns small-12 medium-6 large-6 left">
+                  <div class="columns small-12 medium-6 large-6">
+                    <label for="uEmail">Votre email <small>requis</small>
+                      <small class="show">Définissez un mot de passe pour finaliser votre enregistrement</small>
+                      <input type="email" id="uEmail">
+                    </label>
+                  </div>
+                  <div class="columns small-12 medium-6 large-6">
                     <div class="row collapse">
                       <label for="upassword">Mot de passe <small>requis</small>
                         <small class="show">Définissez un mot de passe pour finaliser votre enregistrement</small>
@@ -261,7 +257,7 @@
               <div class="hide gen-profile" id="genProfile">
                 <div class="list-content row">
                   <div class="columns">
-                    <div class="alert-box warning">
+                    <div class="alert-box alert">
                       Remplissez ces champs pour finaliser votre enregistrement.
                     </div>
                   </div>
@@ -409,3 +405,5 @@
     </script>
 </body>
 </html>
+
+<a href="" data-options="show_on:large" class="has-tip tip-right" aria-haspopup="true" data-tooltip="" id="clearCV" type="button" data-selector="weqpHA" aria-describedby="weqpHA" title=""><i class="fa fa-trash-o"></i></a>

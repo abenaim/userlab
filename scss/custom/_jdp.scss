@@ -4,6 +4,7 @@
 @import 'variables';
 @import 'postResume';
 @import 'uresume';
+@import 'known';
 
 
 
@@ -15,19 +16,60 @@ section.main-section {
 section.jdp-container {
 
 	.row.top-content {
-		background: #FFF;
+		background: #FFFFFF;
 		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+		.hire-insider {
+			text-align: center;
+			box-shadow: -2px 0px 3px rgba(0, 0, 0, 0.15);
+			padding: 15px !important;
+			h4.orange-light {
+				font-size: 20px;
+				margin-top:0;
+			}
+			h4 {
+				font-size: 0.95rem;
+				font-weight: 700;
+				line-height: 24px;
+			    margin: 10px 0 0;
+			}
+			small {
+				font-size: 85%;
+				color: #666;
+				margin-bottom: 7px;
+			    display: block;
+			}
+			.orange-light {
+			    color: rgba(243, 107, 33, 0.73);
+			}
+			h4.orange-light {
+				font-weight: 400;
+			}
+			.button {
+			    margin: 0 0 5px;
+			    padding: 10px 0px !important;
+			    font-size: 90%;
+			}
+			h2, h6 {
+		    	margin: 0;
+			}
+		}
 		.media {
 			.media-left {
 			  padding: 30px 20px;
 			}
 			.media-body {
 				.media-heading {
-					padding-top: 20px;
-			    font-weight: normal;
+					padding: 10px 0;
+				    font-weight: normal;
+				    line-height: 35px;
 				}
 				.tags {
 					margin-bottom: 1rem;
+				}
+				.action {
+					.button {
+						margin-bottom: 0; 
+					}
 				}
 			}
 		}
@@ -52,6 +94,17 @@ section.jdp-container {
 						 background: #00BFA5;
 					}
 				}
+				.tabs.step3 {
+					#tab3 {
+						left: inherit;
+						right: -3%;
+						text-align: center;
+						span:last-child {
+						    position: relative;
+						    left: -32%;
+						}
+					}
+				}
 				.tabs {
 					.tab-title.active {
 						color: #333;
@@ -72,14 +125,18 @@ section.jdp-container {
 						}
 					}
 					#tab2 {
-						left: 28%;
+						left: 25%;
 					}
 					#tab3 {
-						left: 65%;
+						left: 60%;
 						text-align: center;
 					}
 					#tab4 {
-						left: 95%;
+						right: -16px;
+						span:last-child {
+							position: relative;
+							left: -17px;
+						}
 					}
 					.small-circle {
 						width: 30px;
@@ -108,7 +165,7 @@ section.jdp-container {
 								}
 							}
 						}
-						.account {
+						.account,.add-cover-letter {
 							span {
 								position: relative;
 								display: inline-block;
@@ -134,8 +191,8 @@ section.jdp-container {
 								  display: block;
 								  content: '';
 								  border-radius: 2em;
-								  width: 1.5em;
-								  height: 1.5em;
+								  width: 1.7em;
+								  height: 1.7em;
 								  margin-left: -1.45em;
 								  top: 5px;
 								  background: #FFFFFF;
@@ -150,15 +207,16 @@ section.jdp-container {
 									  padding-left: 1.6em;
 									  padding-right: 0.4em;
 										&:before {
-										  content: 'No';
+										  content: 'Non';
 										  color: #FFFFFF;
 										  font-size: 9px !important;
 										  line-height: 27px;
 										  font-weight: bold;
+										  text-align: right;
 										}
 										&:after {
 										  background: #FFFFFF;
-										  left: 1.6em;
+										  left: 1.8em;
 										  font-weight: bold;
 										}
 									}
@@ -177,7 +235,7 @@ section.jdp-container {
 										}
 										&:after {
 										  background: #FFFFFF;
-										  left: 92%;
+										  left: 88%;
 										}
 									}
 									
@@ -186,7 +244,11 @@ section.jdp-container {
 						}
 						.input-copy {
 							margin-bottom: 20px;
-							a {
+							cursor: default;
+							.preview-cv {
+								right: 15px;
+							}
+							/*a {
 								display: block;
 								border: 1px solid #CCC;
 								padding: 10px 14px 12px;
@@ -194,7 +256,7 @@ section.jdp-container {
 								&:hover {
 									background: #f2f2f2;
 								}
-							}
+							}*/
 						}
 						label.error {
 							margin: 0;
@@ -234,10 +296,33 @@ section.jdp-container {
 			}
 		}
 	}
+	.row.middle-content {
+		margin-top: 10px;
+		padding-top: 20px;
+		.job-body {
+			padding: 0 0 20px 10px;
+			h3 {
+				border-bottom: 1px solid #CCCCCC;
+			    padding-bottom: 10px;
+			    margin-bottom: 15px;
+			    font-weight: normal;
+			    color: #023558;
+			}
+			ul {
+				list-style-position: inside;
+			} 
+		}
+	}
 	.info {
 		> * {
 			margin-right:10px;
 		}
+	}
+}
+.switches {
+	margin-top: 20px;
+	> label {
+		display: inline-flex;
 	}
 }
 .privacy, .switches, .savecv, .email-subs {
@@ -245,21 +330,24 @@ section.jdp-container {
 	.switch {
 		margin-top: 5px;
 		margin-right: 15px;
+		input:checked+label {
+			background: #337ab7;
+		}
 		.switch-on {
-	    position: absolute;
-	    left: -55px;
-	    top: 10px;
-			color: #FFF !important;
-	    font-weight: bold;
-	    font-size: 9px !important;
+		    position: absolute;
+		    left: -55px;
+		    top: 10px;
+		    color: #FFF !important;
+		    font-weight: bold;
+		    font-size: 9px !important;
 		}
 		.switch-off {
-	    position: absolute;
-	    left: -25px;
-	    top: 10px;
-			color: #FFF !important;
-	    font-weight: bold;
-	    font-size: 9px !important;
+		    position: absolute;
+		    left: -25px;
+		    top: 10px;
+		    color: #FFF !important;
+		    font-weight: bold;
+		    font-size: 9px !important;
 		}
 	}
 	.switch-text {
@@ -305,14 +393,17 @@ label {
     padding: 10px 20px 12px;
     margin-top: 10px;
   	button, #clearCV {
-  		position: absolute;
-  		right: 14px;
-  		top: 10px;
-  		padding: 0;
+	  	position: absolute;
+	    right: 14px;
+	    top: 10px;
+	    padding: 0;
 	    background: none;
 	    outline: none;
+	    color: #999;
+	    border: none;
 	    &:hover {
 	    	cursor:pointer;
+	    	color: #023558;
 	    }
   	}
   	span {
@@ -327,9 +418,12 @@ label {
 	    transition: border-color 0.15s linear, background 0.15s linear;
   	}
   }
-  .preview-cv {
-  	font-size: 0.80rem;
-  }
+  /*.preview-cv {
+  	position: absolute;
+    right: 50px;
+    line-height: initial;
+    color: #999;
+  }*/
   .type-cover-letter {
   	textarea {
   		width: 100%;
@@ -386,5 +480,6 @@ input[type='file'] {
 .depth-first {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 0px 7px 0 rgba(0, 0, 0, 0.1);
 }
+
 
 
