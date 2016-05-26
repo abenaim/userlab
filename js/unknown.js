@@ -117,10 +117,7 @@ $(document).ready(function() {
     //STEP 2
     $('#btnSendApplication').click(function(){
         $('#panel2').fadeOut(function(){
-            $('#screenLoader').fadeIn().height('.tabs-content').slideUp( 2000 ).delay( 300 );
-            $('#panel3').fadeIn(function(){
-                $('#screenLoader').fadeOut();
-            });
+            $('#panel3').fadeIn();
             $('#tab3').addClass('active');
             $('#tab3 .small-circle').addClass('success');
         });

@@ -384,7 +384,7 @@ label {
   	
   }
   .disabled {
-	    position: relative;
+	position: relative;
     margin-bottom: 5px;
     background-color: transparent;
     box-sizing: content-box;
@@ -408,7 +408,7 @@ label {
   	}
   	span {
   		-webkit-appearance: none;
-	    cursor: not-allowed;
+	    cursor: default;
 	    -moz-appearance: none;
 	    border-radius: 0;
 	    -webkit-transition: border-color 0.15s linear, background 0.15s linear;
