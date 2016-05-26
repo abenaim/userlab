@@ -157,6 +157,7 @@ section.jdp-container {
 				.tabs-content {
 					box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 					padding: 0 30px;
+					position: relative;
 					.content {
 						.profile {
 							[class*="block-grid-"] {
@@ -481,5 +482,18 @@ input[type='file'] {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 0px 7px 0 rgba(0, 0, 0, 0.1);
 }
 
-
+.screen-loader {
+	background: #FFF;
+    position: absolute;
+    left: 0;
+    min-height: 100%;
+    width: 100%;
+    z-index: 1;
+    .screen-content {
+    	color: #020202;
+	    position: inherit;
+	    top: 20%;
+	    width: 100%;
+    }	
+}
 

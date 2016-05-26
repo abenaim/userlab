@@ -65,7 +65,10 @@ $(document).ready(function() {
     //STEP 1
     $('#applyRegister').click(function(){
         $('#panel1').fadeOut(function(){
-            $('#panel2').fadeIn();
+            $('#screenLoader').fadeIn().height('.tabs-content').slideUp( 2000 ).delay( 300 );
+            $('#panel2').fadeIn(function(){
+                $('#screenLoader').fadeOut();
+            });
             $('#tab2').addClass('active');
             $('#tab2').fadeIn().find('.small-circle').addClass('success');
         });
