@@ -228,6 +228,18 @@
                               <small class="error">Please upload your CV.</small>
                             </label>
                           </div>
+                          <div class="switches account">
+                            <label id="accountRegister">
+                              <div class="switch round">
+                                <input id="switch1" type="checkbox" checked>
+                                <span></span>
+                              </div>
+                              <div class="switch-text">
+                                Enregistrer et créer un compte à partir de ce CV <small>optional </small>
+                                <small class="show">Choose "Yes" to create your profile from your CV.</small>
+                              </div>
+                            </label>
+                          </div>
                           <div class="switches cover-letter">
                             <label>
                               <div class="switch round">
@@ -257,18 +269,7 @@
                               </div>
                             </label>
                           </div>
-                          <div class="switches account">
-                            <label id="accountRegister">
-                              <div class="switch round">
-                                <input id="switch1" type="checkbox" checked>
-                                <span></span>
-                              </div>
-                              <div class="switch-text">
-                                Enregistrer et créer un compte à partir de ce CV <small>optional </small>
-                                <small class="show">Choose "Yes" to create your profile from your CV.</small>
-                              </div>
-                            </label>
-                          </div>
+                          
 
 
                           <div class="button-group">
@@ -333,7 +334,7 @@
                         </div>
                         <div class="small-12 medium-6 large-6 columns">
                           <label for="firstName">Votre nom 
-                            <input type="text" id="firstName" value="Bastein Barbe" required>
+                            <input type="text" id="firstName" value="Ludovic Majerus" required>
                           </label>
                         </div>
                         <div class="small-12 medium-6 large-6 columns">
@@ -347,9 +348,18 @@
                           </label>
                         </div>
                         <div class="small-12 medium-6 large-6 columns">
-                          <label for="createPassword">Choississez un mot de passe <small>Required</small>
-                            <input type="password" id="createPassword" value="" required>
-                          </label>
+                          <div class="row collapse">
+                            <label for="upassword">Choississez un mot de passe <small>Required</small>
+                            </label>
+
+                            <div class="small-9 medium-9 large-9 columns">
+                              <input type="password" id="upassword">
+                            </div>
+                            <div class="small-3 medium-3 large-3 columns">
+                              <button type="button" class="postfix" id="pshow">montrer</button>
+                              <button type="button" class="postfix" id="phide" style="display: none;">cacher</button>
+                            </div>
+                          </div>
                         </div>
                         
                         <div class="columns button-group">
@@ -366,7 +376,7 @@
                           <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2" id="applyDetails">
                             <li>
                               <small>Name</small>
-                              <span>Bastein Barbe</span>
+                              <span>Ludovic Majerus</span>
                             </li>
                             <li>
                               <small>Email</small>

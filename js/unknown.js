@@ -117,7 +117,10 @@ $(document).ready(function() {
     //STEP 2
     $('#btnSendApplication').click(function(){
         $('#panel2').fadeOut(function(){
-            $('#panel3').fadeIn();
+            $('#screenLoader').fadeIn().height('.tabs-content').slideUp( 2000 ).delay( 300 );
+            $('#panel3').fadeIn(function(){
+                $('#screenLoader').fadeOut();
+            });
             $('#tab3').addClass('active');
             $('#tab3 .small-circle').addClass('success');
         });
@@ -194,5 +197,19 @@ $(document).ready(function() {
         }, 'slow');
     }); 
 
+
+   //Password SHOW
+    $('#pshow').click(function(){
+        $(this).hide();
+        $('#phide').show();
+        $('#upassword').attr('type', 'text'); 
+    });
+
+    //Passwor HIDE
+    $('#phide').click(function(){
+        $(this).hide();
+        $('#pshow').show();
+        $('#upassword').attr('type', 'password'); 
+    });
 
 });
