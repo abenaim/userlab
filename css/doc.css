@@ -10,3 +10,10 @@ nav {background: #023558 url('http://img.icbdr.com/images/LJ/home/Banner/homepag
 .caption {margin-bottom: 0;}
 footer.page-footer {background-color:transparent;}
 footer.page-footer .footer-copyright{background-color: #022C47}
+
+.card i.material-icons.green-text {
+	position: absolute;
+    bottom: 1px;
+    z-index: 3;
+    right: 5px;
+}
